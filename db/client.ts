@@ -26,13 +26,19 @@ async function connect(): Promise<Db> {
     const version = createHash("sha256").update(schema).digest("hex").slice(0, 16);
     const c = await pool.connect();
     try {
-      await c.query("CREATE TABLE IF NOT EXISTS schema_migrations (version text PRIMARY KEY, applied_at timestamptz NOT NULL DEFAULT now())");
-      const done = await c.query("SELECT 1 FROM schema_migrations WHERE version = $1", [version]);
+      // Fast path without the lock: this version is already applied.
+      const exists = await c.query("SELECT to_regclass('schema_migrations') IS NOT NULL AS ok");
+      const done = exists.rows[0]?.ok ? await c.query("SELECT 1 FROM schema_migrations WHERE version = $1", [version]) : { rows: [] };
       if (!done.rows.length) {
+        // Everything that creates objects runs under the lock: even CREATE … IF NOT EXISTS races in Postgres.
         await c.query("SELECT pg_advisory_lock(746101)");
         try {
-          await c.query(schema);
-          await c.query("INSERT INTO schema_migrations (version) VALUES ($1) ON CONFLICT DO NOTHING", [version]);
+          await c.query("CREATE TABLE IF NOT EXISTS schema_migrations (version text PRIMARY KEY, applied_at timestamptz NOT NULL DEFAULT now())");
+          const again = await c.query("SELECT 1 FROM schema_migrations WHERE version = $1", [version]);
+          if (!again.rows.length) {
+            await c.query(schema);
+            await c.query("INSERT INTO schema_migrations (version) VALUES ($1) ON CONFLICT DO NOTHING", [version]);
+          }
         } finally {
           await c.query("SELECT pg_advisory_unlock(746101)");
         }
@@ -70,7 +76,11 @@ async function connect(): Promise<Db> {
 }
 
 export function db(): Promise<Db> {
-  g.__db ??= connect();
+  // A failed start (e.g. database briefly unreachable) is not cached: the next request tries again.
+  g.__db ??= connect().catch((e) => {
+    g.__db = undefined;
+    throw e;
+  });
   return g.__db;
 }
 
