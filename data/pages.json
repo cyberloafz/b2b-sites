@@ -1,0 +1,1018 @@
+[
+  {
+    "slug": "/",
+    "template": "home",
+    "name": "Home",
+    "seo": {
+      "title": "Private Label Skincare Manufacturer | Meridian Bay",
+      "description": "Private label skincare, custom formulation and bulk wholesale from an ISO 22716 certified maker in South Carolina. Low minimums: 1 gallon bulk or 250 units."
+    },
+    "sections": [
+      {
+        "id": "hero",
+        "type": "hero",
+        "variant": "brand",
+        "eyebrow": "Skincare manufacturing since 1998",
+        "headline": "Private label skincare, made in South Carolina",
+        "subhead": "Stock formulas, custom development and bulk supply for US brands, spas and retailers. Low minimums from an ISO 22716 certified facility.",
+        "primaryCta": {
+          "label": "Request a Quote",
+          "href": "/contact"
+        },
+        "secondaryCta": {
+          "label": "Order Samples",
+          "href": "/request-samples"
+        }
+      },
+      {
+        "id": "badges",
+        "type": "trust_badges",
+        "items": [
+          {
+            "icon": "certificate",
+            "title": "ISO 22716 GMP",
+            "detail": "Certified cosmetic facility"
+          },
+          {
+            "icon": "shield",
+            "title": "FDA-registered",
+            "detail": "Facility registration on file"
+          },
+          {
+            "icon": "leaf",
+            "title": "Cruelty-free",
+            "detail": "Leaping Bunny certified"
+          },
+          {
+            "icon": "box",
+            "title": "Low minimums",
+            "detail": "1 gal bulk · 250 units filled"
+          },
+          {
+            "icon": "flag",
+            "title": "Made in USA",
+            "detail": "North Charleston, SC"
+          }
+        ]
+      },
+      {
+        "id": "services",
+        "type": "service_cards",
+        "heading": "Three ways to work with us",
+        "intro": "Start with a ready-made formula, develop something only your brand has, or buy proven products in bulk.",
+        "cards": [
+          {
+            "title": "Private Label",
+            "body": "Choose from our stock formulas, add your fragrance or a botanical, and launch under your own brand. Buy in bulk or let us fill and label for you.",
+            "image": {
+              "src": "/images/services/private-label.svg",
+              "alt": "Illustration of labeled skincare bottles on a production line",
+              "width": 640,
+              "height": 420
+            },
+            "link": {
+              "label": "Explore private label",
+              "href": "/services/private-label"
+            }
+          },
+          {
+            "title": "Custom Formulation",
+            "body": "Work with our chemists to create a proprietary formula, from first brief and prototypes to stability testing and full production.",
+            "image": {
+              "src": "/images/services/custom-formulation.svg",
+              "alt": "Illustration of lab beakers and a formulation notebook",
+              "width": 640,
+              "height": 420
+            },
+            "link": {
+              "label": "Start a custom project",
+              "href": "/services/custom-formulation"
+            }
+          },
+          {
+            "title": "Bulk & Wholesale",
+            "body": "Order finished formulas by the gallon or 5-gallon pail for your own filling line, spa back-bar or refill station.",
+            "image": {
+              "src": "/images/services/bulk-wholesale.svg",
+              "alt": "Illustration of gallon jugs and pails stacked on a pallet",
+              "width": 640,
+              "height": 420
+            },
+            "link": {
+              "label": "See bulk options",
+              "href": "/services/bulk-wholesale"
+            }
+          }
+        ]
+      },
+      {
+        "id": "categories",
+        "type": "category_tiles",
+        "heading": "Shop stock formulas by category",
+        "categories": [
+          "private-label-facial-cleansers",
+          "private-label-serums",
+          "private-label-moisturizers",
+          "private-label-eye-care",
+          "private-label-body-lotions",
+          "private-label-body-washes",
+          "private-label-hair-care",
+          "private-label-lip-care"
+        ]
+      },
+      {
+        "id": "featured",
+        "type": "product_grid",
+        "heading": "Best-selling stock formulas",
+        "source": {
+          "kind": "featured"
+        },
+        "limit": 8,
+        "viewAll": {
+          "label": "View all products",
+          "href": "/products"
+        }
+      },
+      {
+        "id": "promos",
+        "type": "promo_slider",
+        "slides": [
+          {
+            "title": "New: a 40-scent fragrance library",
+            "body": "Every fragrance is pre-tested in our lotion, wash and shampoo bases, so you can choose with confidence.",
+            "link": {
+              "label": "Ask about fragrances",
+              "href": "/contact"
+            }
+          },
+          {
+            "title": "Starter sample kit",
+            "body": "Five best-selling formulas in 2 oz sizes, shipped in 3–5 business days.",
+            "link": {
+              "label": "Order the kit",
+              "href": "/request-samples"
+            }
+          }
+        ]
+      },
+      {
+        "id": "lab",
+        "type": "image_text",
+        "heading": "A lab team that answers within one business day",
+        "body": "Every inquiry is read by a formulation specialist, not a sales queue. Tell us your product idea, target customer and launch date, and we will come back with formula options, minimums and an honest timeline.",
+        "bullets": [
+          "Formulation, filling and labeling under one roof",
+          "Stability and compatibility testing on every filled run",
+          "Batch records and certificates of analysis with each order"
+        ],
+        "image": {
+          "src": "/images/lab.svg",
+          "alt": "Illustration of a chemist at a lab bench with sample bottles",
+          "width": 720,
+          "height": 540
+        },
+        "imageSide": "right",
+        "cta": {
+          "label": "About our facility",
+          "href": "/about"
+        }
+      },
+      {
+        "id": "stats",
+        "type": "stats",
+        "items": [
+          {
+            "value": "1998",
+            "label": "Making skincare in South Carolina"
+          },
+          {
+            "value": "1",
+            "unit": "gal",
+            "label": "Minimum bulk order"
+          },
+          {
+            "value": "250",
+            "unit": "units",
+            "label": "Minimum filled run"
+          },
+          {
+            "value": "1",
+            "unit": "day",
+            "label": "Reply time on quote requests"
+          }
+        ]
+      },
+      {
+        "id": "faq",
+        "type": "faq",
+        "heading": "Questions brands ask first",
+        "groups": [
+          {
+            "items": [
+              {
+                "question": "What is the minimum order?",
+                "answer": "Bulk orders start at one gallon per formula. Filled and labeled runs start at 250 units per formula and size."
+              },
+              {
+                "question": "How long does production take?",
+                "answer": "Bulk orders usually ship in 2–3 weeks. Filled runs take 4–6 weeks after you approve your label and packaging."
+              },
+              {
+                "question": "Can I try products before ordering?",
+                "answer": "Yes. Sample sizes of every stock formula are available and ship in 3–5 business days."
+              },
+              {
+                "question": "Do you design labels?",
+                "answer": "We print and apply labels from your artwork and can recommend designers. We also check that ingredient lists and warnings match the formula."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cta",
+        "type": "cta_band",
+        "headline": "Tell us what you want to launch",
+        "body": "Talk to a formulation specialist, or start by testing samples on your own.",
+        "primary": {
+          "label": "Request a Quote",
+          "href": "/contact"
+        },
+        "secondary": {
+          "label": "Order Samples",
+          "href": "/request-samples"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "/services/private-label",
+    "template": "service",
+    "name": "Private Label",
+    "seo": {
+      "title": "Private Label Skincare Manufacturing | Meridian Bay",
+      "description": "Launch your skincare line with private label stock formulas. Add your fragrance, choose packaging, and buy bulk or filled from 250 units. Made in the USA."
+    },
+    "sections": [
+      {
+        "id": "hero",
+        "type": "hero",
+        "variant": "split",
+        "eyebrow": "Private label",
+        "headline": "Your brand on proven skincare formulas",
+        "subhead": "Pick from stock formulas, customize fragrance and add-ins, and launch in weeks instead of months.",
+        "primaryCta": {
+          "label": "Request a Quote",
+          "href": "/contact"
+        },
+        "secondaryCta": {
+          "label": "Order Samples",
+          "href": "/request-samples"
+        },
+        "image": {
+          "src": "/images/services/private-label.svg",
+          "alt": "Illustration of labeled skincare bottles on a production line",
+          "width": 640,
+          "height": 420
+        }
+      },
+      {
+        "id": "badges",
+        "type": "trust_badges",
+        "items": [
+          {
+            "icon": "certificate",
+            "title": "ISO 22716 GMP"
+          },
+          {
+            "icon": "box",
+            "title": "250-unit runs"
+          },
+          {
+            "icon": "flask",
+            "title": "Custom add-ins"
+          },
+          {
+            "icon": "truck",
+            "title": "Ships nationwide"
+          }
+        ]
+      },
+      {
+        "id": "what",
+        "type": "image_text",
+        "heading": "What private label includes",
+        "body": "Private label means you sell our tested formula under your own brand. You keep control of the name, the packaging and the price. We handle the formula, production, filling and quality records.",
+        "bullets": [
+          "Stock formulas across face, body, hair and lip care",
+          "Fragrance, color and botanical customization",
+          "Bulk gallons or filled, capped and labeled units",
+          "Ingredient list and label review for US requirements"
+        ],
+        "image": {
+          "src": "/images/lab.svg",
+          "alt": "Illustration of a chemist at a lab bench with sample bottles",
+          "width": 720,
+          "height": 540
+        },
+        "imageSide": "left"
+      },
+      {
+        "id": "process",
+        "type": "process_steps",
+        "heading": "Three steps to your first order",
+        "steps": [
+          {
+            "title": "Choose your formulas",
+            "body": "Order samples, test them at home or in your spa, and pick the formulas and any fragrance or add-in changes."
+          },
+          {
+            "title": "Choose your packaging",
+            "body": "Use our stock bottles, jars and tubes, or send your own components for a compatibility check."
+          },
+          {
+            "title": "Approve and produce",
+            "body": "Approve your label proof. We produce, fill, label and ship, with batch records for every run."
+          }
+        ]
+      },
+      {
+        "id": "categories",
+        "type": "category_tiles",
+        "heading": "Private label categories",
+        "categories": [
+          "private-label-facial-cleansers",
+          "private-label-serums",
+          "private-label-moisturizers",
+          "private-label-eye-care",
+          "private-label-body-lotions",
+          "private-label-body-washes",
+          "private-label-hair-care",
+          "private-label-lip-care"
+        ]
+      },
+      {
+        "id": "stats",
+        "type": "stats",
+        "heading": "Minimums built for growing brands",
+        "items": [
+          {
+            "value": "1",
+            "unit": "gal",
+            "label": "Bulk minimum per formula"
+          },
+          {
+            "value": "250",
+            "unit": "units",
+            "label": "Filled minimum per formula and size"
+          },
+          {
+            "value": "4–6",
+            "unit": "weeks",
+            "label": "Typical filled lead time"
+          }
+        ]
+      },
+      {
+        "id": "testimonials",
+        "type": "testimonials",
+        "heading": "What clients say",
+        "items": [
+          {
+            "quote": "[Sample testimonial: the platform only publishes real customer quotes supplied by the company. Replace this text before going live.]",
+            "name": "Sample Client",
+            "role": "Founder",
+            "company": "Example Skincare Co."
+          }
+        ]
+      },
+      {
+        "id": "faq",
+        "type": "faq",
+        "groups": [
+          {
+            "items": [
+              {
+                "question": "Do I own the formula?",
+                "answer": "Stock formulas remain ours, but your brand, label and packaging are yours. If you need to own a formula outright, choose custom formulation."
+              },
+              {
+                "question": "Can I change the fragrance?",
+                "answer": "Yes. Choose from our fragrance library or supply your own fragrance oil for a compatibility check."
+              },
+              {
+                "question": "Do you help with labeling rules?",
+                "answer": "We review ingredient lists, net contents and required warnings on your label proof. Final legal responsibility for claims stays with the brand owner."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cta",
+        "type": "cta_band",
+        "headline": "Ready to launch your line?",
+        "primary": {
+          "label": "Request a Quote",
+          "href": "/contact"
+        },
+        "secondary": {
+          "label": "Order Samples",
+          "href": "/request-samples"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "/services/custom-formulation",
+    "template": "service",
+    "name": "Custom Formulation",
+    "seo": {
+      "title": "Custom Skincare Formulation & Development",
+      "description": "Develop a proprietary skincare formula with our chemists: brief, prototypes, stability testing and full-scale production in an ISO 22716 US facility."
+    },
+    "sections": [
+      {
+        "id": "hero",
+        "type": "hero",
+        "variant": "split",
+        "eyebrow": "Custom formulation",
+        "headline": "A formula only your brand has",
+        "subhead": "Work directly with our chemists from first brief to full production, with stability testing at every step.",
+        "primaryCta": {
+          "label": "Start a Project",
+          "href": "#project-form"
+        },
+        "image": {
+          "src": "/images/services/custom-formulation.svg",
+          "alt": "Illustration of lab beakers and a formulation notebook",
+          "width": 640,
+          "height": 420
+        }
+      },
+      {
+        "id": "who",
+        "type": "image_text",
+        "heading": "Built for brands with a clear point of view",
+        "body": "Custom formulation suits brands that want a signature texture, a hero ingredient at a specific level, or a claim no stock formula supports. You own the final formula once development is complete.",
+        "bullets": [
+          "Benchmarking against products you admire",
+          "Up to three rounds of prototypes",
+          "Stability and preservative efficacy testing",
+          "Scale-up to production batches"
+        ],
+        "image": {
+          "src": "/images/lab.svg",
+          "alt": "Illustration of a chemist at a lab bench with sample bottles",
+          "width": 720,
+          "height": 540
+        },
+        "imageSide": "right"
+      },
+      {
+        "id": "process",
+        "type": "process_steps",
+        "heading": "How development works",
+        "steps": [
+          {
+            "title": "Brief",
+            "body": "Share your target customer, hero ingredients, texture, claims and price point."
+          },
+          {
+            "title": "Benchmark",
+            "body": "We review reference products and agree on what success looks and feels like."
+          },
+          {
+            "title": "Prototypes",
+            "body": "You receive lab samples and feedback rounds until the formula is right."
+          },
+          {
+            "title": "Testing",
+            "body": "Stability, packaging compatibility and preservative efficacy testing."
+          },
+          {
+            "title": "Production",
+            "body": "We scale up, fill and label, and keep batch records for every run."
+          }
+        ]
+      },
+      {
+        "id": "faq",
+        "type": "faq",
+        "groups": [
+          {
+            "items": [
+              {
+                "question": "How long does custom development take?",
+                "answer": "Most projects take 8–16 weeks from brief to production, depending on prototype rounds and testing."
+              },
+              {
+                "question": "Who owns the formula?",
+                "answer": "Once development fees are paid, the formula belongs to your brand."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "project-form",
+        "type": "inquiry_form",
+        "form": "project",
+        "heading": "Tell us about your project",
+        "intro": "Three short steps. A formulation specialist will reply within one business day.",
+        "submitLabel": "Send Project Brief"
+      }
+    ]
+  },
+  {
+    "slug": "/services/bulk-wholesale",
+    "template": "service",
+    "name": "Bulk & Wholesale",
+    "seo": {
+      "title": "Bulk & Wholesale Skincare by the Gallon",
+      "description": "Buy finished skincare and body care formulas in 1-gallon and 5-gallon sizes for your own filling line, spa back-bar or refill station. Ships nationwide."
+    },
+    "sections": [
+      {
+        "id": "hero",
+        "type": "hero",
+        "variant": "split",
+        "eyebrow": "Bulk & wholesale",
+        "headline": "Finished formulas by the gallon",
+        "subhead": "Proven products in 1-gallon and 5-gallon sizes for filling lines, back-bars and refill stations.",
+        "primaryCta": {
+          "label": "Request Bulk Pricing",
+          "href": "/contact"
+        },
+        "secondaryCta": {
+          "label": "Order Samples",
+          "href": "/request-samples"
+        },
+        "image": {
+          "src": "/images/services/bulk-wholesale.svg",
+          "alt": "Illustration of gallon jugs and pails stacked on a pallet",
+          "width": 640,
+          "height": 420
+        }
+      },
+      {
+        "id": "who",
+        "type": "image_text",
+        "heading": "Who buys in bulk",
+        "body": "Brands with their own filling equipment, spas and salons stocking back-bar products, hotels and gyms filling dispensers, and refill shops selling by weight.",
+        "bullets": [
+          "1-gallon jugs and 5-gallon pails",
+          "Certificate of analysis with every batch",
+          "Freight or parcel shipping across the US"
+        ],
+        "image": {
+          "src": "/images/services/bulk-wholesale.svg",
+          "alt": "Illustration of gallon jugs and pails stacked on a pallet",
+          "width": 640,
+          "height": 420
+        },
+        "imageSide": "left"
+      },
+      {
+        "id": "featured",
+        "type": "product_grid",
+        "heading": "Popular bulk formulas",
+        "source": {
+          "kind": "manual",
+          "products": [
+            "shea-body-lotion",
+            "botanical-body-wash",
+            "sulfate-free-shampoo",
+            "hydrating-conditioner",
+            "gentle-gel-cleanser",
+            "daily-barrier-moisturizer"
+          ]
+        },
+        "limit": 6,
+        "viewAll": {
+          "label": "View all products",
+          "href": "/products"
+        }
+      },
+      {
+        "id": "shipping",
+        "type": "rich_text",
+        "heading": "Ordering and shipping",
+        "body": "Bulk orders usually ship within **2–3 weeks**. One-gallon jugs ship by parcel; orders of four or more 5-gallon pails ship by freight on a pallet.\n\n- Volume pricing starts at 5 gallons per formula\n- Pails are sealed and labeled with batch number and production date\n- Sample sizes are available before your first bulk order",
+        "background": "alt"
+      },
+      {
+        "id": "cta",
+        "type": "cta_band",
+        "headline": "Get bulk pricing for your formulas",
+        "primary": {
+          "label": "Request Bulk Pricing",
+          "href": "/contact"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "/how-it-works",
+    "template": "how_it_works",
+    "name": "How It Works",
+    "seo": {
+      "title": "How Private Label Works, Step by Step",
+      "description": "From samples to shipped product: the six steps of launching a private label skincare line with Meridian Bay, including timelines and what you need to prepare."
+    },
+    "sections": [
+      {
+        "id": "hero",
+        "type": "hero",
+        "variant": "compact",
+        "headline": "How private label works, step by step",
+        "subhead": "Most brands go from first samples to shipped product in six to ten weeks."
+      },
+      {
+        "id": "steps",
+        "type": "process_steps",
+        "heading": "Six steps from idea to inventory",
+        "steps": [
+          {
+            "title": "Order samples",
+            "body": "Test stock formulas in 2 oz sizes. Samples ship in 3–5 business days."
+          },
+          {
+            "title": "Finalize formulas",
+            "body": "Choose formulas, fragrance and any add-ins. We confirm minimums and lead time."
+          },
+          {
+            "title": "Choose packaging",
+            "body": "Pick stock components or send yours for a compatibility check."
+          },
+          {
+            "title": "Approve labels",
+            "body": "Send artwork; we review ingredient lists and required label elements."
+          },
+          {
+            "title": "Production",
+            "body": "We make, fill, cap and label your products, with batch records."
+          },
+          {
+            "title": "Ship",
+            "body": "Products ship to you or your fulfillment center anywhere in the US."
+          }
+        ]
+      },
+      {
+        "id": "faq",
+        "type": "faq",
+        "groups": [
+          {
+            "items": [
+              {
+                "question": "What do I need before my first order?",
+                "answer": "Your brand name, chosen formulas, packaging choice and print-ready label artwork. We can help with everything except the artwork itself."
+              },
+              {
+                "question": "Can I start with bulk and move to filled later?",
+                "answer": "Yes. Many brands fill their first batches by hand, then move to filled runs once demand is steady."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cta",
+        "type": "cta_band",
+        "headline": "Start with samples",
+        "primary": {
+          "label": "Order Samples",
+          "href": "/request-samples"
+        },
+        "secondary": {
+          "label": "Request a Quote",
+          "href": "/contact"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "/products",
+    "template": "products_index",
+    "name": "Products",
+    "seo": {
+      "title": "Private Label Skincare Products | Meridian Bay",
+      "description": "Browse private label stock formulas: cleansers, serums, moisturizers, eye care, body lotions, body washes, hair care and lip care. Bulk or filled."
+    },
+    "sections": [
+      {
+        "id": "hero",
+        "type": "hero",
+        "variant": "compact",
+        "headline": "Private label skincare products",
+        "subhead": "Stock formulas across eight categories, available in bulk or filled and labeled with your brand."
+      },
+      {
+        "id": "categories",
+        "type": "category_tiles",
+        "categories": [
+          "private-label-facial-cleansers",
+          "private-label-serums",
+          "private-label-moisturizers",
+          "private-label-eye-care",
+          "private-label-body-lotions",
+          "private-label-body-washes",
+          "private-label-hair-care",
+          "private-label-lip-care"
+        ]
+      },
+      {
+        "id": "featured",
+        "type": "product_grid",
+        "heading": "Best sellers",
+        "source": {
+          "kind": "featured"
+        },
+        "limit": 8
+      },
+      {
+        "id": "cta",
+        "type": "cta_band",
+        "headline": "Not sure where to start?",
+        "body": "Tell us about your customers and we will suggest a starter range.",
+        "primary": {
+          "label": "Request a Quote",
+          "href": "/contact"
+        },
+        "secondary": {
+          "label": "Order Samples",
+          "href": "/request-samples"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "/about",
+    "template": "about",
+    "name": "About Us",
+    "seo": {
+      "title": "About Meridian Bay Formulations",
+      "description": "Meridian Bay Formulations has made skincare in North Charleston, South Carolina since 1998. Learn about our facility, certifications and team."
+    },
+    "sections": [
+      {
+        "id": "hero",
+        "type": "hero",
+        "variant": "compact",
+        "eyebrow": "About us",
+        "headline": "Skincare makers in the Lowcountry since 1998",
+        "subhead": "A family-owned manufacturer serving brands, spas and retailers across the United States."
+      },
+      {
+        "id": "story",
+        "type": "rich_text",
+        "heading": "Our story",
+        "body": "Meridian Bay Formulations began in 1998 as a small lab making body lotions for coastal spas. Today we formulate, fill and label skincare, body care and hair care for brands of every size, from first-time founders ordering 250 units to established retailers buying by the pallet.\n\nWe still work the way we started: chemists talk directly with clients, small runs get the same care as large ones, and every batch is documented."
+      },
+      {
+        "id": "stats",
+        "type": "stats",
+        "items": [
+          {
+            "value": "1998",
+            "label": "Founded"
+          },
+          {
+            "value": "8",
+            "label": "Product categories"
+          },
+          {
+            "value": "25",
+            "label": "Stock formulas"
+          }
+        ]
+      },
+      {
+        "id": "badges",
+        "type": "trust_badges",
+        "items": [
+          {
+            "icon": "certificate",
+            "title": "ISO 22716 GMP"
+          },
+          {
+            "icon": "shield",
+            "title": "FDA-registered"
+          },
+          {
+            "icon": "leaf",
+            "title": "Cruelty-free"
+          }
+        ]
+      },
+      {
+        "id": "facility",
+        "type": "image_text",
+        "heading": "Our facility",
+        "body": "Formulation, compounding, filling and labeling happen under one roof in North Charleston, which keeps lead times short and quality consistent.",
+        "image": {
+          "src": "/images/lab.svg",
+          "alt": "Illustration of a chemist at a lab bench with sample bottles",
+          "width": 720,
+          "height": 540
+        },
+        "imageSide": "right"
+      },
+      {
+        "id": "cta",
+        "type": "cta_band",
+        "headline": "Visit or talk to our team",
+        "primary": {
+          "label": "Contact Us",
+          "href": "/contact"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "/contact",
+    "template": "contact",
+    "name": "Contact",
+    "seo": {
+      "title": "Request a Quote | Meridian Bay Formulations",
+      "description": "Request a quote for private label, custom formulation or bulk skincare. A formulation specialist replies within one business day. Call (843) 555-0142."
+    },
+    "sections": [
+      {
+        "id": "quote-form",
+        "type": "inquiry_form",
+        "form": "quote",
+        "heading": "Request a quote",
+        "intro": "Tell us what you need. A formulation specialist will reply within one business day.",
+        "submitLabel": "Request Quote"
+      },
+      {
+        "id": "contact",
+        "type": "contact_info",
+        "heading": "Visit or call",
+        "showHours": true
+      }
+    ]
+  },
+  {
+    "slug": "/request-samples",
+    "template": "generic",
+    "name": "Request Samples",
+    "seo": {
+      "title": "Order Private Label Skincare Samples",
+      "description": "Order samples of any Meridian Bay stock formula. Sample sizes ship within 3–5 business days anywhere in the US so you can test before you buy."
+    },
+    "sections": [
+      {
+        "id": "sample-form",
+        "type": "inquiry_form",
+        "form": "sample",
+        "heading": "Order samples",
+        "intro": "Choose up to five formulas. Samples ship within 3–5 business days.",
+        "submitLabel": "Request Samples"
+      },
+      {
+        "id": "info",
+        "type": "rich_text",
+        "heading": "About samples",
+        "body": "Samples are 2 oz for most formulas and 0.5 oz for eye care. Lip products ship as a sample set. Sample costs are credited toward your first production order.",
+        "background": "alt"
+      }
+    ]
+  },
+  {
+    "slug": "/faq",
+    "template": "faq",
+    "name": "FAQ",
+    "seo": {
+      "title": "Private Label Skincare FAQ | Meridian Bay",
+      "description": "Answers about minimum orders, lead times, samples, labeling, custom formulation and shipping for private label skincare made in South Carolina."
+    },
+    "sections": [
+      {
+        "id": "faq",
+        "type": "faq",
+        "heading": "Frequently asked questions",
+        "groups": [
+          {
+            "title": "Ordering",
+            "items": [
+              {
+                "question": "What is the minimum order?",
+                "answer": "One gallon per formula for bulk, or 250 units per formula and size for filled runs."
+              },
+              {
+                "question": "Do you require a deposit?",
+                "answer": "Filled runs require a 50% deposit when you approve your label proof; the balance is due before shipping."
+              }
+            ]
+          },
+          {
+            "title": "Production",
+            "items": [
+              {
+                "question": "What are your lead times?",
+                "answer": "Bulk: 2–3 weeks. Filled: 4–6 weeks after label approval. Custom development: 8–16 weeks."
+              },
+              {
+                "question": "Can you source packaging?",
+                "answer": "Yes. We stock common bottles, jars and tubes and can source specialty components."
+              }
+            ]
+          },
+          {
+            "title": "Compliance",
+            "items": [
+              {
+                "question": "Are your products tested on animals?",
+                "answer": "No. Our facility is Leaping Bunny certified."
+              },
+              {
+                "question": "Who is responsible for product claims?",
+                "answer": "The brand owner is responsible for marketing claims. We review labels for ingredient and warning accuracy."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cta",
+        "type": "cta_band",
+        "headline": "Still have a question?",
+        "primary": {
+          "label": "Contact Us",
+          "href": "/contact"
+        }
+      }
+    ]
+  },
+  {
+    "slug": "/thank-you",
+    "template": "thank_you",
+    "name": "Thank You",
+    "seo": {
+      "title": "Thank You | Meridian Bay Formulations",
+      "noindex": true
+    },
+    "sections": [
+      {
+        "id": "thanks",
+        "type": "rich_text",
+        "heading": "Thank you — we received your request",
+        "body": "A formulation specialist will reply within one business day. If your request is urgent, call **(843) 555-0142**.\n\n[Back to products](/products)"
+      }
+    ]
+  },
+  {
+    "slug": "/privacy",
+    "template": "legal",
+    "name": "Privacy Policy",
+    "seo": {
+      "title": "Privacy Policy | Meridian Bay Formulations",
+      "description": "How Meridian Bay Formulations collects, uses and protects information submitted through this website, and how to request access or deletion."
+    },
+    "sections": [
+      {
+        "id": "policy",
+        "type": "rich_text",
+        "heading": "Privacy Policy",
+        "body": "### What we collect\nInformation you submit in forms (name, company, email, phone, project details) and basic analytics data.\n\n### How we use it\nTo respond to inquiries, fulfill sample and production orders, and, if you opt in, send occasional marketing emails.\n\n### Your choices\nYou can request access to or deletion of your information by emailing hello@meridianbay.example. California residents have additional rights under the CCPA/CPRA. We honor Global Privacy Control signals."
+      }
+    ]
+  },
+  {
+    "slug": "/terms",
+    "template": "legal",
+    "name": "Terms",
+    "seo": {
+      "title": "Terms of Use | Meridian Bay Formulations",
+      "description": "Terms governing use of the Meridian Bay Formulations website, quotes, samples and production orders for private label and bulk skincare products."
+    },
+    "sections": [
+      {
+        "id": "terms",
+        "type": "rich_text",
+        "heading": "Terms of Use",
+        "body": "*Sample terms generated by the platform. They must be reviewed by the company's counsel before publishing.*\n\nQuotes are valid for 30 days. Production orders are governed by the signed manufacturing agreement. Website content is provided for information only."
+      }
+    ]
+  },
+  {
+    "slug": "/accessibility",
+    "template": "legal",
+    "name": "Accessibility",
+    "seo": {
+      "title": "Accessibility Statement | Meridian Bay",
+      "description": "Meridian Bay Formulations aims to meet WCAG 2.1 AA on this website. Contact us if any page or form is difficult to use and we will help."
+    },
+    "sections": [
+      {
+        "id": "a11y",
+        "type": "rich_text",
+        "heading": "Accessibility statement",
+        "body": "We aim for this website to meet the Web Content Accessibility Guidelines (WCAG) 2.1 at level AA. If you have trouble using any page or form, email hello@meridianbay.example or call (843) 555-0142 and we will help."
+      }
+    ]
+  }
+]

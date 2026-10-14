@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Stable id, unique within the page"
+    },
+    "type": {
+      "type": "string",
+      "const": "cta_band"
+    },
+    "headline": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 70
+    },
+    "body": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "primary": {
+      "type": "object",
+      "properties": {
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 30
+        },
+        "href": {
+          "type": "string",
+          "pattern": "^(\\/[a-z0-9\\-\\/#?=&]*|#[a-z0-9-]+|https?:\\/\\/\\S+|mailto:\\S+|tel:\\S+)$"
+        }
+      },
+      "required": [
+        "label",
+        "href"
+      ],
+      "description": "Guided path, e.g. 'Request a Quote'"
+    },
+    "secondary": {
+      "description": "Self-serve path, e.g. 'Order Samples'",
+      "type": "object",
+      "properties": {
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 30
+        },
+        "href": {
+          "type": "string",
+          "pattern": "^(\\/[a-z0-9\\-\\/#?=&]*|#[a-z0-9-]+|https?:\\/\\/\\S+|mailto:\\S+|tel:\\S+)$"
+        }
+      },
+      "required": [
+        "label",
+        "href"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "headline",
+    "primary"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "legalName": "Prairie Pantry Co-Packing, LLC",
+  "brandName": "Prairie Pantry",
+  "websiteUrl": "https://www.prairiepantry.example",
+  "foundedYear": 2009,
+  "street": "4410 S 108th St",
+  "city": "Omaha",
+  "state": "NE",
+  "zip": "68137",
+  "phone": "(402) 555-0187",
+  "email": "hello@prairiepantry.example",
+  "inquiryEmail": "sales@prairiepantry.example",
+  "industry": "food co-packing",
+  "whatYouMake": "Prairie Pantry makes sauces, marinades, dry rubs and pickles for food brands, grocers and restaurant groups. We produce your recipe or adapt one of our stock formulas, then fill, label and pack it in our Omaha plant.",
+  "services": [
+    { "name": "Private Label", "description": "Put your brand on one of our proven stock sauces, rubs or pickles. Choose from existing recipes, adjust flavor, and launch with your label." },
+    { "name": "Contract Manufacturing", "description": "We scale and produce your own recipe: kitchen trials, scale-up, hot-fill or dry blending, labeling and case packing." }
+  ],
+  "audience": "food brands, regional grocers and restaurant groups",
+  "certifications": ["SQF Level 2 certified", "FDA registered facility"],
+  "minimumOrder": "500 units per SKU",
+  "leadTime": "4–6 weeks",
+  "capacity": "Hot-fill and dry blending lines",
+  "differentiators": ["Recipe scale-up in our test kitchen", "Separate dry-goods room"],
+  "keywords": ["sauce co-packer", "private label bbq sauce", "food co-packing Nebraska"],
+  "testimonials": [],
+  "tone": "plain-spoken",
+  "stylePack": "auto"
+}

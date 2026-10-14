@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 540" width="720" height="540"><rect width="720" height="540" fill="#f2efe8"/>
+<ellipse cx="360" cy="464.4" rx="244.8" ry="18.900000000000002" fill="#1f3d4a" opacity="0.08"/><rect x="60" y="400" width="600" height="18" rx="3" fill="#1f3d4a"/>
+<rect x="90" y="250" width="150" height="10" rx="3" fill="#b08a5a"/><rect x="96" y="260" width="8" height="140" fill="#b08a5a"/><rect x="226" y="260" width="8" height="140" fill="#b08a5a"/>
+<rect x="110" y="190" width="20" height="90" rx="10" fill="#ffffff" stroke="#1f3d4a" stroke-width="2.5"/><rect x="112" y="235" width="16" height="43" rx="8" fill="#e9c46a" opacity="0.85"/><rect x="140" y="190" width="20" height="90" rx="10" fill="#ffffff" stroke="#1f3d4a" stroke-width="2.5"/><rect x="142" y="227" width="16" height="51" rx="8" fill="#8fb9a8" opacity="0.85"/><rect x="170" y="190" width="20" height="90" rx="10" fill="#ffffff" stroke="#1f3d4a" stroke-width="2.5"/><rect x="172" y="219" width="16" height="59" rx="8" fill="#e7a3ab" opacity="0.85"/><rect x="200" y="190" width="20" height="90" rx="10" fill="#ffffff" stroke="#1f3d4a" stroke-width="2.5"/><rect x="202" y="211" width="16" height="67" rx="8" fill="#b8742f" opacity="0.85"/>
+<path d="M300 220 v70 l-55 108 h150 l-55 -108 v-70z" fill="#ffffff" stroke="#1f3d4a" stroke-width="3"/><path d="M262 365 l30 -50 h56 l30 50 v0 l9 33 h-134z" fill="#8fb9a8" opacity="0.75"/>
+<rect x="290" y="206" width="60" height="16" rx="4" fill="#1f3d4a"/><g transform="translate(440 400) scale(0.5) translate(-440 -400)"><rect x="375" y="190" width="130" height="210" rx="26" fill="#b8742f" stroke="#1f3d4a" stroke-width="3"/>
+<rect x="410" y="156" width="60" height="34" rx="4" fill="#2a2a2a"/>
+<rect x="422" y="86" width="36" height="72" rx="18" fill="#2a2a2a"/>
+<rect x="389" y="250" width="102" height="100" rx="6" fill="#f4f1ea"/><text x="440" y="306" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#1f3d4a" letter-spacing="1">YOUR BRAND</text></g><g transform="translate(540 400) scale(0.5) translate(-540 -400)"><rect x="465" y="100" width="150" height="300" rx="22" fill="#ffffff" stroke="#1f3d4a" stroke-width="3"/>
+<rect x="514" y="60" width="52" height="40" rx="6" fill="#1f3d4a"/>
+<rect x="532" y="10" width="16" height="50" fill="#1f3d4a"/>
+<path d="M532 10 h70 v16 h-70z" fill="#1f3d4a"/>
+<rect x="481" y="190" width="118" height="110" rx="6" fill="#d8e6e3"/><text x="540" y="252" text-anchor="middle" font-family="Georgia, serif" font-size="16" fill="#1f3d4a" letter-spacing="1">YOUR BRAND</text></g><g transform="translate(620 400) scale(0.5) translate(-620 -400)"><rect x="490" y="250" width="260" height="150" rx="20" fill="#fffaf3" stroke="#1f3d4a" stroke-width="3"/>
+<rect x="484" y="190" width="272" height="64" rx="14" fill="#a8763e"/>
+<rect x="520" y="280" width="200" height="80" rx="6" fill="#f1e2cf"/><text x="620" y="328" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#1f3d4a" letter-spacing="1">YOUR BRAND</text></g></svg>

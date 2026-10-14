@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="640" height="420"><rect width="640" height="420" fill="#e4eef0"/>
+<ellipse cx="320" cy="361.2" rx="217.60000000000002" ry="14.700000000000001" fill="#1f3d4a" opacity="0.08"/><rect x="40" y="300" width="560" height="22" rx="4" fill="#1f3d4a" opacity="0.85"/><g transform="translate(140 300) scale(0.5) translate(-140 -300)"><rect x="65" y="0" width="150" height="300" rx="22" fill="#ffffff" stroke="#1f3d4a" stroke-width="3"/>
+<rect x="114" y="-40" width="52" height="40" rx="6" fill="#1f3d4a"/>
+<rect x="132" y="-90" width="16" height="50" fill="#1f3d4a"/>
+<path d="M132 -90 h70 v16 h-70z" fill="#1f3d4a"/>
+<rect x="81" y="90" width="118" height="110" rx="6" fill="#d8e6e3"/><text x="140" y="152" text-anchor="middle" font-family="Georgia, serif" font-size="16" fill="#1f3d4a" letter-spacing="1">YOUR BRAND</text></g><g transform="translate(260 300) scale(0.5) translate(-260 -300)"><rect x="185" y="10" width="150" height="290" rx="40" fill="#fffaf3" stroke="#1f3d4a" stroke-width="3"/>
+<rect x="220" y="-36" width="80" height="50" rx="12" fill="#a8763e"/>
+<rect x="201" y="90" width="118" height="120" rx="6" fill="#f1e2cf"/><text x="260" y="156" text-anchor="middle" font-family="Georgia, serif" font-size="16" fill="#1f3d4a" letter-spacing="1">YOUR BRAND</text></g><g transform="translate(380 300) scale(0.5) translate(-380 -300)"><path d="M310 40 q0 -40 40 -40 h60 q40 0 40 40 v250 q0 10 -10 10 h-120 q-10 0 -10 -10z" fill="#ffffff" stroke="#1f3d4a" stroke-width="3"/>
+<rect x="350" y="-50" width="60" height="52" rx="8" fill="#1f3d4a"/>
+<rect x="326" y="90" width="108" height="120" rx="6" fill="#d8e6e3"/><text x="380" y="156" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#1f3d4a" letter-spacing="1">YOUR BRAND</text></g><g transform="translate(500 300) scale(0.5) translate(-500 -300)"><path d="M435 -20 h130 l-12 280 h-106z" fill="#fffaf3" stroke="#1f3d4a" stroke-width="3"/>
+<rect x="439" y="-34" width="122" height="14" fill="#f1e2cf" stroke="#1f3d4a" stroke-width="2"/>
+<rect x="466" y="260" width="68" height="40" rx="6" fill="#a8763e"/>
+<rect x="453" y="60" width="94" height="110" rx="4" fill="#f1e2cf"/><text x="500" y="122" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#1f3d4a" letter-spacing="1">YOUR BRAND</text></g></svg>

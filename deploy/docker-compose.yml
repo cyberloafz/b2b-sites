@@ -1,0 +1,38 @@
+# One-server setup: app + Postgres + Caddy (automatic HTTPS for every verified customer domain) + cron.
+#   cd deploy && cp ../.env.example .env && (fill it in) && docker compose up -d --build
+# Point *.PLATFORM_DOMAIN and customer domains (CNAME / A) at this server.
+services:
+  app:
+    build: ..
+    env_file: .env
+    environment:
+      DATABASE_URL: postgres://sites:${POSTGRES_PASSWORD}@db:5432/sites
+      DOMAIN_PROVIDER: caddy
+      STORAGE_DIR: /data/uploads
+    volumes: [uploads:/data/uploads]
+    depends_on: [db]
+    restart: unless-stopped
+  db:
+    image: postgres:17
+    environment:
+      POSTGRES_USER: sites
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: sites
+    volumes: [pgdata:/var/lib/postgresql/data]
+    restart: unless-stopped
+  caddy:
+    image: caddy:2
+    ports: ["80:80", "443:443"]
+    volumes: [./Caddyfile:/etc/caddy/Caddyfile:ro, caddydata:/data]
+    environment:
+      ADMIN_HOST: ${ADMIN_HOST}
+    depends_on: [app]
+    restart: unless-stopped
+  cron:
+    image: curlimages/curl:8.10.1
+    entrypoint: ["/bin/sh", "-c", "while true; do curl -fsS -H \"Authorization: Bearer $$CRON_SECRET\" http://app:3000/api/cron/deliver > /dev/null || true; sleep 300; done"]
+    environment:
+      CRON_SECRET: ${CRON_SECRET}
+    depends_on: [app]
+    restart: unless-stopped
+volumes: { pgdata: {}, uploads: {}, caddydata: {} }

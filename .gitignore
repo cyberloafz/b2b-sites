@@ -1,0 +1,12 @@
+node_modules
+.next
+.data
+out
+artifact
+.env*.local
+*.tsbuildinfo
+__pycache__
+.env
+.env.production
+*.zip
+.vercel

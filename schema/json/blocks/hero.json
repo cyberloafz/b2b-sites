@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Stable id, unique within the page"
+    },
+    "type": {
+      "type": "string",
+      "const": "hero"
+    },
+    "variant": {
+      "default": "brand",
+      "type": "string",
+      "enum": [
+        "brand",
+        "split",
+        "compact"
+      ]
+    },
+    "eyebrow": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 40
+    },
+    "headline": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 70
+    },
+    "subhead": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160
+    },
+    "primaryCta": {
+      "type": "object",
+      "properties": {
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 30
+        },
+        "href": {
+          "type": "string",
+          "pattern": "^(\\/[a-z0-9\\-\\/#?=&]*|#[a-z0-9-]+|https?:\\/\\/\\S+|mailto:\\S+|tel:\\S+)$"
+        }
+      },
+      "required": [
+        "label",
+        "href"
+      ]
+    },
+    "secondaryCta": {
+      "type": "object",
+      "properties": {
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 30
+        },
+        "href": {
+          "type": "string",
+          "pattern": "^(\\/[a-z0-9\\-\\/#?=&]*|#[a-z0-9-]+|https?:\\/\\/\\S+|mailto:\\S+|tel:\\S+)$"
+        }
+      },
+      "required": [
+        "label",
+        "href"
+      ]
+    },
+    "image": {
+      "description": "Used by the split variant",
+      "type": "object",
+      "properties": {
+        "src": {
+          "type": "string",
+          "minLength": 1
+        },
+        "alt": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 125,
+          "description": "Required. Describe what is in the image; never 'image' or the file name"
+        },
+        "width": {
+          "type": "integer",
+          "exclusiveMinimum": 0,
+          "maximum": 9007199254740991
+        },
+        "height": {
+          "type": "integer",
+          "exclusiveMinimum": 0,
+          "maximum": 9007199254740991
+        }
+      },
+      "required": [
+        "src",
+        "alt"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "headline"
+  ]
+}

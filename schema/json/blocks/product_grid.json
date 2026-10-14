@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Stable id, unique within the page"
+    },
+    "type": {
+      "type": "string",
+      "const": "product_grid"
+    },
+    "heading": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 70
+    },
+    "source": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "type": "string",
+              "const": "collection"
+            },
+            "collection": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "kind",
+            "collection"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "type": "string",
+              "const": "manual"
+            },
+            "products": {
+              "minItems": 1,
+              "maxItems": 24,
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "kind",
+            "products"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "type": "string",
+              "const": "featured"
+            }
+          },
+          "required": [
+            "kind"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "type": "string",
+              "const": "related"
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "description": "Product pages only: same collection, excluding itself"
+        }
+      ]
+    },
+    "limit": {
+      "default": 8,
+      "type": "integer",
+      "minimum": 2,
+      "maximum": 48
+    },
+    "viewAll": {
+      "type": "object",
+      "properties": {
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 30
+        },
+        "href": {
+          "type": "string",
+          "pattern": "^(\\/[a-z0-9\\-\\/#?=&]*|#[a-z0-9-]+|https?:\\/\\/\\S+|mailto:\\S+|tel:\\S+)$"
+        }
+      },
+      "required": [
+        "label",
+        "href"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "source"
+  ]
+}

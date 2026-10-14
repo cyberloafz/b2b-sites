@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600"><rect width="800" height="600" fill="#e3efe8"/>
+<ellipse cx="400" cy="516" rx="272" ry="21.000000000000004" fill="#1f3d4a" opacity="0.08"/><g transform="translate(165 520) scale(0.88) translate(-165 -520)"><rect x="90" y="230" width="150" height="290" rx="40" fill="#d7ece0" stroke="#1f3d4a" stroke-width="3"/>
+<rect x="125" y="184" width="80" height="50" rx="12" fill="#2f5d4a"/>
+<rect x="106" y="310" width="118" height="120" rx="6" fill="#ffffff"/><text x="165" y="376" text-anchor="middle" font-family="Georgia, serif" font-size="16" fill="#1f3d4a" letter-spacing="1">YOUR BRAND</text></g><g transform="translate(400 520) scale(0.88) translate(-400 -520)"><rect x="270" y="370" width="260" height="150" rx="20" fill="#d7ece0" stroke="#1f3d4a" stroke-width="3"/>
+<rect x="264" y="310" width="272" height="64" rx="14" fill="#2f5d4a"/>
+<rect x="300" y="400" width="200" height="80" rx="6" fill="#ffffff"/><text x="400" y="448" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#1f3d4a" letter-spacing="1">YOUR BRAND</text></g><g transform="translate(635 520) scale(0.88) translate(-635 -520)"><rect x="545" y="160" width="180" height="360" rx="26.4" fill="#d7ece0" stroke="#1f3d4a" stroke-width="3"/>
+<rect x="603.8" y="112" width="62.4" height="48" rx="6" fill="#2f5d4a"/>
+<rect x="625.4" y="52" width="19.2" height="60" fill="#2f5d4a"/>
+<path d="M625.4 52 h84 v19.2 h-84z" fill="#2f5d4a"/>
+<rect x="564.2" y="268" width="141.6" height="132" rx="6" fill="#ffffff"/><text x="635" y="342.4" text-anchor="middle" font-family="Georgia, serif" font-size="19.2" fill="#1f3d4a" letter-spacing="1">YOUR BRAND</text></g></svg>

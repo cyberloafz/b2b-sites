@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Stable id, unique within the page"
+    },
+    "type": {
+      "type": "string",
+      "const": "logo_wall"
+    },
+    "heading": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 70
+    },
+    "logos": {
+      "minItems": 3,
+      "maxItems": 18,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "src": {
+            "type": "string",
+            "minLength": 1
+          },
+          "alt": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 125,
+            "description": "Required. Describe what is in the image; never 'image' or the file name"
+          },
+          "width": {
+            "type": "integer",
+            "exclusiveMinimum": 0,
+            "maximum": 9007199254740991
+          },
+          "height": {
+            "type": "integer",
+            "exclusiveMinimum": 0,
+            "maximum": 9007199254740991
+          }
+        },
+        "required": [
+          "src",
+          "alt"
+        ]
+      }
+    },
+    "permissionConfirmed": {
+      "type": "boolean",
+      "const": true,
+      "description": "Company confirmed it may show these logos"
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "logos",
+    "permissionConfirmed"
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Stable id, unique within the page"
+    },
+    "type": {
+      "type": "string",
+      "const": "stats"
+    },
+    "heading": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 70
+    },
+    "items": {
+      "minItems": 2,
+      "maxItems": 4,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 10
+          },
+          "unit": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 16
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 50
+          }
+        },
+        "required": [
+          "value",
+          "label"
+        ]
+      },
+      "description": "Every number must come from the company's materials"
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "items"
+  ]
+}

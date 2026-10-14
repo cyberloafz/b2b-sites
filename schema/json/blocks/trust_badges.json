@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Stable id, unique within the page"
+    },
+    "type": {
+      "type": "string",
+      "const": "trust_badges"
+    },
+    "items": {
+      "minItems": 3,
+      "maxItems": 6,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "icon": {
+            "type": "string",
+            "enum": [
+              "leaf",
+              "shield",
+              "flask",
+              "factory",
+              "flag",
+              "box",
+              "truck",
+              "badge",
+              "clock",
+              "drop",
+              "star",
+              "users",
+              "beaker",
+              "certificate",
+              "handshake",
+              "recycle",
+              "chat",
+              "document"
+            ],
+            "description": "Icon from the platform icon set"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 24
+          },
+          "detail": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 40
+          }
+        },
+        "required": [
+          "icon",
+          "title"
+        ]
+      },
+      "description": "Only claims backed by the company's documents"
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "items"
+  ]
+}

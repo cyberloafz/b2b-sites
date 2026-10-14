@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Stable id, unique within the page"
+    },
+    "type": {
+      "type": "string",
+      "const": "testimonials"
+    },
+    "heading": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 70
+    },
+    "items": {
+      "minItems": 1,
+      "maxItems": 6,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "quote": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 300
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 40
+          },
+          "role": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 40
+          },
+          "company": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 60
+          }
+        },
+        "required": [
+          "quote",
+          "name"
+        ]
+      },
+      "description": "Real testimonials supplied by the company only. The AI never writes these."
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "items"
+  ]
+}

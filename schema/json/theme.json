@@ -1,0 +1,160 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "stylePack": {
+      "type": "string",
+      "enum": [
+        "natural-organic",
+        "industrial-solid",
+        "clinical-clean",
+        "modern-tech"
+      ],
+      "description": "Preset the AI picked; individual tokens below may override it"
+    },
+    "color": {
+      "type": "object",
+      "properties": {
+        "primary": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$",
+          "description": "Brand colour: hero background, key accents"
+        },
+        "primaryInk": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$",
+          "description": "Text colour on top of primary (must reach 4.5:1)"
+        },
+        "accent": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$",
+          "description": "Primary buttons"
+        },
+        "accentInk": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$",
+          "description": "Text on accent buttons (must reach 4.5:1)"
+        },
+        "secondary": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$",
+          "description": "Secondary buttons, tags"
+        },
+        "surface": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$",
+          "description": "Page background"
+        },
+        "surfaceAlt": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$",
+          "description": "Alternating section background"
+        },
+        "text": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$",
+          "description": "Body text (must reach 4.5:1 on surface)"
+        },
+        "muted": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$",
+          "description": "Secondary text"
+        },
+        "border": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        }
+      },
+      "required": [
+        "primary",
+        "primaryInk",
+        "accent",
+        "accentInk",
+        "secondary",
+        "surface",
+        "surfaceAlt",
+        "text",
+        "muted",
+        "border"
+      ]
+    },
+    "font": {
+      "type": "object",
+      "properties": {
+        "heading": {
+          "type": "string",
+          "enum": [
+            "classic-serif",
+            "modern-sans",
+            "humanist-sans",
+            "industrial-mono"
+          ]
+        },
+        "body": {
+          "type": "string",
+          "enum": [
+            "classic-serif",
+            "modern-sans",
+            "humanist-sans",
+            "industrial-mono"
+          ]
+        },
+        "headingCase": {
+          "default": "normal",
+          "type": "string",
+          "enum": [
+            "normal",
+            "uppercase"
+          ]
+        }
+      },
+      "required": [
+        "heading",
+        "body"
+      ]
+    },
+    "radius": {
+      "type": "string",
+      "enum": [
+        "0",
+        "4",
+        "8",
+        "16"
+      ],
+      "description": "Corner radius in px"
+    },
+    "spacing": {
+      "type": "string",
+      "enum": [
+        "compact",
+        "standard",
+        "relaxed"
+      ]
+    },
+    "containerWidth": {
+      "type": "string",
+      "enum": [
+        "1200",
+        "1300",
+        "1440"
+      ]
+    },
+    "buttonStyle": {
+      "type": "string",
+      "enum": [
+        "solid",
+        "outline",
+        "pill"
+      ]
+    }
+  },
+  "required": [
+    "stylePack",
+    "color",
+    "font",
+    "radius",
+    "spacing",
+    "containerWidth",
+    "buttonStyle"
+  ]
+}

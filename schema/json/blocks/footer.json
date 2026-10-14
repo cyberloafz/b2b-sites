@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Stable id, unique within the page"
+    },
+    "type": {
+      "type": "string",
+      "const": "footer"
+    },
+    "blurb": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "columns": {
+      "minItems": 1,
+      "maxItems": 4,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 30
+          },
+          "links": {
+            "minItems": 1,
+            "maxItems": 10,
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "label": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 30
+                },
+                "href": {
+                  "type": "string",
+                  "pattern": "^(\\/[a-z0-9\\-\\/#?=&]*|#[a-z0-9-]+|https?:\\/\\/\\S+|mailto:\\S+|tel:\\S+)$"
+                }
+              },
+              "required": [
+                "label",
+                "href"
+              ]
+            }
+          }
+        },
+        "required": [
+          "title",
+          "links"
+        ]
+      }
+    },
+    "newsletter": {
+      "description": "Separate, unticked opt-in (CAN-SPAM)",
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "type": "boolean"
+        },
+        "heading": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 50
+        },
+        "consentText": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        }
+      },
+      "required": [
+        "enabled",
+        "heading",
+        "consentText"
+      ]
+    },
+    "legalLinks": {
+      "minItems": 2,
+      "maxItems": 5,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 30
+          },
+          "href": {
+            "type": "string",
+            "pattern": "^(\\/[a-z0-9\\-\\/#?=&]*|#[a-z0-9-]+|https?:\\/\\/\\S+|mailto:\\S+|tel:\\S+)$"
+          }
+        },
+        "required": [
+          "label",
+          "href"
+        ]
+      }
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "blurb",
+    "columns",
+    "legalLinks"
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Stable id, unique within the page"
+    },
+    "type": {
+      "type": "string",
+      "const": "product_detail"
+    },
+    "showSpecSheet": {
+      "default": true,
+      "type": "boolean"
+    },
+    "ctas": {
+      "description": "Defaults: Request a Quote / Order a Sample",
+      "type": "array",
+      "prefixItems": [
+        {
+          "type": "object",
+          "properties": {
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 30
+            },
+            "href": {
+              "type": "string",
+              "pattern": "^(\\/[a-z0-9\\-\\/#?=&]*|#[a-z0-9-]+|https?:\\/\\/\\S+|mailto:\\S+|tel:\\S+)$"
+            }
+          },
+          "required": [
+            "label",
+            "href"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 30
+            },
+            "href": {
+              "type": "string",
+              "pattern": "^(\\/[a-z0-9\\-\\/#?=&]*|#[a-z0-9-]+|https?:\\/\\/\\S+|mailto:\\S+|tel:\\S+)$"
+            }
+          },
+          "required": [
+            "label",
+            "href"
+          ]
+        }
+      ],
+      "items": false,
+      "minItems": 2,
+      "maxItems": 2
+    }
+  },
+  "required": [
+    "id",
+    "type"
+  ]
+}

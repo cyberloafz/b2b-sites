@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600"><rect width="800" height="600" fill="#f5ece3"/>
+<ellipse cx="400" cy="516" rx="272" ry="21.000000000000004" fill="#1f3d4a" opacity="0.08"/><g transform="translate(290 520) scale(0.88) translate(-290 -520)"><rect x="200" y="160" width="180" height="360" rx="26.4" fill="#fffaf3" stroke="#1f3d4a" stroke-width="3"/>
+<rect x="258.8" y="112" width="62.4" height="48" rx="6" fill="#a8763e"/>
+<rect x="280.4" y="52" width="19.2" height="60" fill="#a8763e"/>
+<path d="M280.4 52 h84 v19.2 h-84z" fill="#a8763e"/>
+<rect x="219.2" y="268" width="141.6" height="132" rx="6" fill="#f1e2cf"/><text x="290" y="342.4" text-anchor="middle" font-family="Georgia, serif" font-size="19.2" fill="#1f3d4a" letter-spacing="1">YOUR BRAND</text></g><g transform="translate(510 520) scale(0.88) translate(-510 -520)"><rect x="380" y="370" width="260" height="150" rx="20" fill="#fffaf3" stroke="#1f3d4a" stroke-width="3"/>
+<rect x="374" y="310" width="272" height="64" rx="14" fill="#a8763e"/>
+<rect x="410" y="400" width="200" height="80" rx="6" fill="#f1e2cf"/><text x="510" y="448" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#1f3d4a" letter-spacing="1">YOUR BRAND</text></g></svg>

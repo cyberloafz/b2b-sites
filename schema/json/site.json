@@ -1,0 +1,2615 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "number",
+      "const": 1
+    },
+    "company": {
+      "type": "object",
+      "properties": {
+        "legalName": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "brandName": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 40
+        },
+        "tagline": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 90
+        },
+        "foundedYear": {
+          "type": "integer",
+          "minimum": 1800,
+          "maximum": 2100
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 400,
+          "description": "Fact paragraph AI search engines can quote: who, where, what, for whom"
+        },
+        "address": {
+          "type": "object",
+          "properties": {
+            "street": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 80
+            },
+            "city": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 40
+            },
+            "region": {
+              "type": "string",
+              "minLength": 2,
+              "maxLength": 2,
+              "description": "US state code"
+            },
+            "postalCode": {
+              "type": "string",
+              "pattern": "^\\d{5}(-\\d{4})?$"
+            },
+            "country": {
+              "type": "string",
+              "const": "US"
+            }
+          },
+          "required": [
+            "street",
+            "city",
+            "region",
+            "postalCode",
+            "country"
+          ]
+        },
+        "phone": {
+          "type": "string",
+          "pattern": "^\\+1[0-9]{10}$",
+          "description": "E.164, e.g. +15035550123"
+        },
+        "phoneDisplay": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 20
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "pattern": "^(?:[A-Za-z0-9_'+\\-]+\\.)*[A-Za-z0-9_'+\\-]*[A-Za-z0-9_+-]@(?:[A-Za-z0-9][A-Za-z0-9\\-]*\\.)+[A-Za-z]{2,}$"
+        },
+        "inquiryRecipients": {
+          "minItems": 1,
+          "maxItems": 5,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "email",
+            "pattern": "^(?:[A-Za-z0-9_'+\\-]+\\.)*[A-Za-z0-9_'+\\-]*[A-Za-z0-9_+-]@(?:[A-Za-z0-9][A-Za-z0-9\\-]*\\.)+[A-Za-z]{2,}$"
+          }
+        },
+        "hours": {
+          "maxItems": 7,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "days": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 20
+              },
+              "open": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 10
+              },
+              "close": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 10
+              }
+            },
+            "required": [
+              "days",
+              "open",
+              "close"
+            ]
+          }
+        },
+        "certifications": {
+          "default": [],
+          "maxItems": 10,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 60
+          }
+        },
+        "social": {
+          "default": [],
+          "maxItems": 5,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "network": {
+                "type": "string",
+                "enum": [
+                  "linkedin",
+                  "instagram",
+                  "facebook",
+                  "youtube",
+                  "x"
+                ]
+              },
+              "url": {
+                "type": "string",
+                "format": "uri"
+              }
+            },
+            "required": [
+              "network",
+              "url"
+            ]
+          }
+        },
+        "siteUrl": {
+          "type": "string",
+          "format": "uri",
+          "description": "Canonical origin, no trailing slash"
+        }
+      },
+      "required": [
+        "legalName",
+        "brandName",
+        "tagline",
+        "description",
+        "address",
+        "phone",
+        "phoneDisplay",
+        "email",
+        "inquiryRecipients",
+        "siteUrl"
+      ]
+    },
+    "theme": {
+      "type": "object",
+      "properties": {
+        "stylePack": {
+          "type": "string",
+          "enum": [
+            "natural-organic",
+            "industrial-solid",
+            "clinical-clean",
+            "modern-tech"
+          ],
+          "description": "Preset the AI picked; individual tokens below may override it"
+        },
+        "color": {
+          "type": "object",
+          "properties": {
+            "primary": {
+              "type": "string",
+              "pattern": "^#[0-9a-fA-F]{6}$",
+              "description": "Brand colour: hero background, key accents"
+            },
+            "primaryInk": {
+              "type": "string",
+              "pattern": "^#[0-9a-fA-F]{6}$",
+              "description": "Text colour on top of primary (must reach 4.5:1)"
+            },
+            "accent": {
+              "type": "string",
+              "pattern": "^#[0-9a-fA-F]{6}$",
+              "description": "Primary buttons"
+            },
+            "accentInk": {
+              "type": "string",
+              "pattern": "^#[0-9a-fA-F]{6}$",
+              "description": "Text on accent buttons (must reach 4.5:1)"
+            },
+            "secondary": {
+              "type": "string",
+              "pattern": "^#[0-9a-fA-F]{6}$",
+              "description": "Secondary buttons, tags"
+            },
+            "surface": {
+              "type": "string",
+              "pattern": "^#[0-9a-fA-F]{6}$",
+              "description": "Page background"
+            },
+            "surfaceAlt": {
+              "type": "string",
+              "pattern": "^#[0-9a-fA-F]{6}$",
+              "description": "Alternating section background"
+            },
+            "text": {
+              "type": "string",
+              "pattern": "^#[0-9a-fA-F]{6}$",
+              "description": "Body text (must reach 4.5:1 on surface)"
+            },
+            "muted": {
+              "type": "string",
+              "pattern": "^#[0-9a-fA-F]{6}$",
+              "description": "Secondary text"
+            },
+            "border": {
+              "type": "string",
+              "pattern": "^#[0-9a-fA-F]{6}$"
+            }
+          },
+          "required": [
+            "primary",
+            "primaryInk",
+            "accent",
+            "accentInk",
+            "secondary",
+            "surface",
+            "surfaceAlt",
+            "text",
+            "muted",
+            "border"
+          ]
+        },
+        "font": {
+          "type": "object",
+          "properties": {
+            "heading": {
+              "type": "string",
+              "enum": [
+                "classic-serif",
+                "modern-sans",
+                "humanist-sans",
+                "industrial-mono"
+              ]
+            },
+            "body": {
+              "type": "string",
+              "enum": [
+                "classic-serif",
+                "modern-sans",
+                "humanist-sans",
+                "industrial-mono"
+              ]
+            },
+            "headingCase": {
+              "default": "normal",
+              "type": "string",
+              "enum": [
+                "normal",
+                "uppercase"
+              ]
+            }
+          },
+          "required": [
+            "heading",
+            "body"
+          ]
+        },
+        "radius": {
+          "type": "string",
+          "enum": [
+            "0",
+            "4",
+            "8",
+            "16"
+          ],
+          "description": "Corner radius in px"
+        },
+        "spacing": {
+          "type": "string",
+          "enum": [
+            "compact",
+            "standard",
+            "relaxed"
+          ]
+        },
+        "containerWidth": {
+          "type": "string",
+          "enum": [
+            "1200",
+            "1300",
+            "1440"
+          ]
+        },
+        "buttonStyle": {
+          "type": "string",
+          "enum": [
+            "solid",
+            "outline",
+            "pill"
+          ]
+        }
+      },
+      "required": [
+        "stylePack",
+        "color",
+        "font",
+        "radius",
+        "spacing",
+        "containerWidth",
+        "buttonStyle"
+      ]
+    },
+    "services": {
+      "minItems": 1,
+      "maxItems": 5,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "slug": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 40
+          }
+        },
+        "required": [
+          "slug",
+          "name"
+        ]
+      }
+    },
+    "globals": {
+      "type": "object",
+      "properties": {
+        "announcement": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Stable id, unique within the page"
+            },
+            "type": {
+              "type": "string",
+              "const": "announcement_bar"
+            },
+            "messages": {
+              "minItems": 1,
+              "maxItems": 3,
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "text": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 90
+                  },
+                  "link": {
+                    "type": "object",
+                    "properties": {
+                      "label": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 30
+                      },
+                      "href": {
+                        "type": "string",
+                        "pattern": "^(\\/[a-z0-9\\-\\/#?=&]*|#[a-z0-9-]+|https?:\\/\\/\\S+|mailto:\\S+|tel:\\S+)$"
+                      }
+                    },
+                    "required": [
+                      "label",
+                      "href"
+                    ]
+                  }
+                },
+                "required": [
+                  "text"
+                ]
+              }
+            }
+          },
+          "required": [
+            "id",
+            "type",
+            "messages"
+          ]
+        },
+        "header": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Stable id, unique within the page"
+            },
+            "type": {
+              "type": "string",
+              "const": "header"
+            },
+            "logo": {
+              "type": "object",
+              "properties": {
+                "src": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "alt": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 125,
+                  "description": "Required. Describe what is in the image; never 'image' or the file name"
+                },
+                "width": {
+                  "type": "integer",
+                  "exclusiveMinimum": 0,
+                  "maximum": 9007199254740991
+                },
+                "height": {
+                  "type": "integer",
+                  "exclusiveMinimum": 0,
+                  "maximum": 9007199254740991
+                }
+              },
+              "required": [
+                "src",
+                "alt"
+              ]
+            },
+            "logoText": {
+              "description": "Shown next to the logo mark if set",
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 40
+            },
+            "nav": {
+              "minItems": 2,
+              "maxItems": 7,
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/__schema0"
+              },
+              "description": "Top-level items; up to 3 levels deep"
+            },
+            "cta": {
+              "type": "object",
+              "properties": {
+                "label": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 30
+                },
+                "href": {
+                  "type": "string",
+                  "pattern": "^(\\/[a-z0-9\\-\\/#?=&]*|#[a-z0-9-]+|https?:\\/\\/\\S+|mailto:\\S+|tel:\\S+)$"
+                }
+              },
+              "required": [
+                "label",
+                "href"
+              ],
+              "description": "Always-visible inquiry button, e.g. 'Request a Quote'"
+            }
+          },
+          "required": [
+            "id",
+            "type",
+            "logo",
+            "nav",
+            "cta"
+          ]
+        },
+        "footer": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Stable id, unique within the page"
+            },
+            "type": {
+              "type": "string",
+              "const": "footer"
+            },
+            "blurb": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            },
+            "columns": {
+              "minItems": 1,
+              "maxItems": 4,
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 30
+                  },
+                  "links": {
+                    "minItems": 1,
+                    "maxItems": 10,
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 30
+                        },
+                        "href": {
+                          "type": "string",
+                          "pattern": "^(\\/[a-z0-9\\-\\/#?=&]*|#[a-z0-9-]+|https?:\\/\\/\\S+|mailto:\\S+|tel:\\S+)$"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "href"
+                      ]
+                    }
+                  }
+                },
+                "required": [
+                  "title",
+                  "links"
+                ]
+              }
+            },
+            "newsletter": {
+              "description": "Separate, unticked opt-in (CAN-SPAM)",
+              "type": "object",
+              "properties": {
+                "enabled": {
+                  "type": "boolean"
+                },
+                "heading": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 50
+                },
+                "consentText": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 200
+                }
+              },
+              "required": [
+                "enabled",
+                "heading",
+                "consentText"
+              ]
+            },
+            "legalLinks": {
+              "minItems": 2,
+              "maxItems": 5,
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "label": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 30
+                  },
+                  "href": {
+                    "type": "string",
+                    "pattern": "^(\\/[a-z0-9\\-\\/#?=&]*|#[a-z0-9-]+|https?:\\/\\/\\S+|mailto:\\S+|tel:\\S+)$"
+                  }
+                },
+                "required": [
+                  "label",
+                  "href"
+                ]
+              }
+            }
+          },
+          "required": [
+            "id",
+            "type",
+            "blurb",
+            "columns",
+            "legalLinks"
+          ]
+        }
+      },
+      "required": [
+        "header",
+        "footer"
+      ]
+    },
+    "pages": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "slug": {
+            "type": "string",
+            "pattern": "^\\/([a-z0-9-]+(\\/[a-z0-9-]+)*)?$",
+            "description": "'/' for home, '/about', '/services/private-label'"
+          },
+          "template": {
+            "type": "string",
+            "enum": [
+              "home",
+              "service",
+              "how_it_works",
+              "products_index",
+              "about",
+              "contact",
+              "faq",
+              "thank_you",
+              "legal",
+              "generic"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 60,
+            "description": "Used in breadcrumbs and admin"
+          },
+          "sections": {
+            "minItems": 1,
+            "maxItems": 30,
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "minLength": 1,
+                      "description": "Stable id, unique within the page"
+                    },
+                    "type": {
+                      "type": "string",
+                      "const": "announcement_bar"
+                    },
+                    "messages": {
+                      "minItems": 1,
+                      "maxItems": 3,
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "text": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 90
+                          },
+                          "link": {
+                            "type": "object",
+                            "properties": {
+                              "label": {
+                                "type": "string",
+                                "minLength": 1,
+                                "maxLength": 30
+                              },
+                              "href": {
+                                "type": "string",
+                                "pattern": "^(\\/[a-z0-9\\-\\/#?=&]*|#[a-z0-9-]+|https?:\\/\\/\\S+|mailto:\\S+|tel:\\S+)$"
+                              }
+                            },
+                            "required": [
+                              "label",
+                              "href"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "text"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "type",
+                    "messages"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "minLength": 1,
+                      "description": "Stable id, unique within the page"
+                    },
+                    "type": {
+                      "type": "string",
+                      "const": "header"
+                    },
+                    "logo": {
+                      "type": "object",
+                      "properties": {
+                        "src": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "alt": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 125,
+                          "description": "Required. Describe what is in the image; never 'image' or the file name"
+                        },
+                        "width": {
+                          "type": "integer",
+                          "exclusiveMinimum": 0,
+                          "maximum": 9007199254740991
+                        },
+                        "height": {
+                          "type": "integer",
+                          "exclusiveMinimum": 0,
+                          "maximum": 9007199254740991
+                        }
+                      },
+                      "required": [
+                        "src",
+                        "alt"
+                      ]
+                    },
+                    "logoText": {
+                      "description": "Shown next to the logo mark if set",
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 40
+                    },
+                    "nav": {
+                      "minItems": 2,
+                      "maxItems": 7,
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/$defs/__schema0"
+                      },
+                      "description": "Top-level items; up to 3 levels deep"
+                    },
+                    "cta": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 30
+                        },
+                        "href": {
+                          "type": "string",
+                          "pattern": "^(\\/[a-z0-9\\-\\/#?=&]*|#[a-z0-9-]+|https?:\\/\\/\\S+|mailto:\\S+|tel:\\S+)$"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "href"
+                      ],
+                      "description": "Always-visible inquiry button, e.g. 'Request a Quote'"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "type",
+                    "logo",
+                    "nav",
+                    "cta"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "minLength": 1,
+                      "description": "Stable id, unique within the page"
+                    },
+                    "type": {
+                      "type": "string",
+                      "const": "hero"
+                    },
+                    "variant": {
+                      "default": "brand",
+                      "type": "string",
+                      "enum": [
+                        "brand",
+                        "split",
+                        "compact"
+                      ]
+                    },
+                    "eyebrow": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 40
+                    },
+                    "headline": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 70
+                    },
+                    "subhead": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 160
+                    },
+                    "primaryCta": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 30
+                        },
+                        "href": {
+                          "type": "string",
+                          "pattern": "^(\\/[a-z0-9\\-\\/#?=&]*|#[a-z0-9-]+|https?:\\/\\/\\S+|mailto:\\S+|tel:\\S+)$"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "href"
+                      ]
+                    },
+                    "secondaryCta": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 30
+                        },
+                        "href": {
+                          "type": "string",
+                          "pattern": "^(\\/[a-z0-9\\-\\/#?=&]*|#[a-z0-9-]+|https?:\\/\\/\\S+|mailto:\\S+|tel:\\S+)$"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "href"
+                      ]
+                    },
+                    "image": {
+                      "description": "Used by the split variant",
+                      "type": "object",
+                      "properties": {
+                        "src": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "alt": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 125,
+                          "description": "Required. Describe what is in the image; never 'image' or the file name"
+                        },
+                        "width": {
+                          "type": "integer",
+                          "exclusiveMinimum": 0,
+                          "maximum": 9007199254740991
+                        },
+                        "height": {
+                          "type": "integer",
+                          "exclusiveMinimum": 0,
+                          "maximum": 9007199254740991
+                        }
+                      },
+                      "required": [
+                        "src",
+                        "alt"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "type",
+                    "headline"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "minLength": 1,
+                      "description": "Stable id, unique within the page"
+                    },
+                    "type": {
+                      "type": "string",
+                      "const": "trust_badges"
+                    },
+                    "items": {
+                      "minItems": 3,
+                      "maxItems": 6,
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "icon": {
+                            "type": "string",
+                            "enum": [
+                              "leaf",
+                              "shield",
+                              "flask",
+                              "factory",
+                              "flag",
+                              "box",
+                              "truck",
+                              "badge",
+                              "clock",
+                              "drop",
+                              "star",
+                              "users",
+                              "beaker",
+                              "certificate",
+                              "handshake",
+                              "recycle",
+                              "chat",
+                              "document"
+                            ],
+                            "description": "Icon from the platform icon set"
+                          },
+                          "title": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 24
+                          },
+                          "detail": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 40
+                          }
+                        },
+                        "required": [
+                          "icon",
+                          "title"
+                        ]
+                      },
+                      "description": "Only claims backed by the company's documents"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "type",
+                    "items"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "minLength": 1,
+                      "description": "Stable id, unique within the page"
+                    },
+                    "type": {
+                      "type": "string",
+                      "const": "service_cards"
+                    },
+                    "heading": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 70
+                    },
+                    "intro": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 220
+                    },
+                    "cards": {
+                      "minItems": 2,
+                      "maxItems": 4,
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "title": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 40
+                          },
+                          "body": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 220
+                          },
+                          "image": {
+                            "type": "object",
+                            "properties": {
+                              "src": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "alt": {
+                                "type": "string",
+                                "minLength": 1,
+                                "maxLength": 125,
+                                "description": "Required. Describe what is in the image; never 'image' or the file name"
+                              },
+                              "width": {
+                                "type": "integer",
+                                "exclusiveMinimum": 0,
+                                "maximum": 9007199254740991
+                              },
+                              "height": {
+                                "type": "integer",
+                                "exclusiveMinimum": 0,
+                                "maximum": 9007199254740991
+                              }
+                            },
+                            "required": [
+                              "src",
+                              "alt"
+                            ]
+                          },
+                          "link": {
+                            "type": "object",
+                            "properties": {
+                              "label": {
+                                "type": "string",
+                                "minLength": 1,
+                                "maxLength": 30
+                              },
+                              "href": {
+                                "type": "string",
+                                "pattern": "^(\\/[a-z0-9\\-\\/#?=&]*|#[a-z0-9-]+|https?:\\/\\/\\S+|mailto:\\S+|tel:\\S+)$"
+                              }
+                            },
+                            "required": [
+                              "label",
+                              "href"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "title",
+                          "body",
+                          "link"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "type",
+                    "cards"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "minLength": 1,
+                      "description": "Stable id, unique within the page"
+                    },
+                    "type": {
+                      "type": "string",
+                      "const": "promo_slider"
+                    },
+                    "slides": {
+                      "minItems": 1,
+                      "maxItems": 3,
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "title": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 60
+                          },
+                          "body": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 180
+                          },
+                          "image": {
+                            "type": "object",
+                            "properties": {
+                              "src": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "alt": {
+                                "type": "string",
+                                "minLength": 1,
+                                "maxLength": 125,
+                                "description": "Required. Describe what is in the image; never 'image' or the file name"
+                              },
+                              "width": {
+                                "type": "integer",
+                                "exclusiveMinimum": 0,
+                                "maximum": 9007199254740991
+                              },
+                              "height": {
+                                "type": "integer",
+                                "exclusiveMinimum": 0,
+                                "maximum": 9007199254740991
+                              }
+                            },
+                            "required": [
+                              "src",
+                              "alt"
+                            ]
+                          },
+                          "link": {
+                            "type": "object",
+                            "properties": {
+                              "label": {
+                                "type": "string",
+                                "minLength": 1,
+                                "maxLength": 30
+                              },
+                              "href": {
+                                "type": "string",
+                                "pattern": "^(\\/[a-z0-9\\-\\/#?=&]*|#[a-z0-9-]+|https?:\\/\\/\\S+|mailto:\\S+|tel:\\S+)$"
+                              }
+                            },
+                            "required": [
+                              "label",
+                              "href"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "title"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "type",
+                    "slides"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "minLength": 1,
+                      "description": "Stable id, unique within the page"
+                    },
+                    "type": {
+                      "type": "string",
+                      "const": "category_tiles"
+                    },
+                    "heading": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 70
+                    },
+                    "intro": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 220
+                    },
+                    "categories": {
+                      "minItems": 2,
+                      "maxItems": 12,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "description": "Collection slug"
+                      },
+                      "description": "Tile image and alt come from the collection itself"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "type",
+                    "categories"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "minLength": 1,
+                      "description": "Stable id, unique within the page"
+                    },
+                    "type": {
+                      "type": "string",
+                      "const": "product_grid"
+                    },
+                    "heading": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 70
+                    },
+                    "source": {
+                      "oneOf": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "const": "collection"
+                            },
+                            "collection": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "kind",
+                            "collection"
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "const": "manual"
+                            },
+                            "products": {
+                              "minItems": 1,
+                              "maxItems": 24,
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            }
+                          },
+                          "required": [
+                            "kind",
+                            "products"
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "const": "featured"
+                            }
+                          },
+                          "required": [
+                            "kind"
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "kind": {
+                              "type": "string",
+                              "const": "related"
+                            }
+                          },
+                          "required": [
+                            "kind"
+                          ],
+                          "description": "Product pages only: same collection, excluding itself"
+                        }
+                      ]
+                    },
+                    "limit": {
+                      "default": 8,
+                      "type": "integer",
+                      "minimum": 2,
+                      "maximum": 48
+                    },
+                    "viewAll": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 30
+                        },
+                        "href": {
+                          "type": "string",
+                          "pattern": "^(\\/[a-z0-9\\-\\/#?=&]*|#[a-z0-9-]+|https?:\\/\\/\\S+|mailto:\\S+|tel:\\S+)$"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "href"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "type",
+                    "source"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "minLength": 1,
+                      "description": "Stable id, unique within the page"
+                    },
+                    "type": {
+                      "type": "string",
+                      "const": "image_text"
+                    },
+                    "heading": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 70
+                    },
+                    "body": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 600
+                    },
+                    "bullets": {
+                      "maxItems": 6,
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 90
+                      }
+                    },
+                    "image": {
+                      "type": "object",
+                      "properties": {
+                        "src": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "alt": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 125,
+                          "description": "Required. Describe what is in the image; never 'image' or the file name"
+                        },
+                        "width": {
+                          "type": "integer",
+                          "exclusiveMinimum": 0,
+                          "maximum": 9007199254740991
+                        },
+                        "height": {
+                          "type": "integer",
+                          "exclusiveMinimum": 0,
+                          "maximum": 9007199254740991
+                        }
+                      },
+                      "required": [
+                        "src",
+                        "alt"
+                      ]
+                    },
+                    "imageSide": {
+                      "default": "right",
+                      "type": "string",
+                      "enum": [
+                        "left",
+                        "right"
+                      ]
+                    },
+                    "cta": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 30
+                        },
+                        "href": {
+                          "type": "string",
+                          "pattern": "^(\\/[a-z0-9\\-\\/#?=&]*|#[a-z0-9-]+|https?:\\/\\/\\S+|mailto:\\S+|tel:\\S+)$"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "href"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "type",
+                    "heading",
+                    "body",
+                    "image"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "minLength": 1,
+                      "description": "Stable id, unique within the page"
+                    },
+                    "type": {
+                      "type": "string",
+                      "const": "process_steps"
+                    },
+                    "heading": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 70
+                    },
+                    "intro": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 220
+                    },
+                    "steps": {
+                      "minItems": 3,
+                      "maxItems": 8,
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "title": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 50
+                          },
+                          "body": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 200
+                          }
+                        },
+                        "required": [
+                          "title",
+                          "body"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "type",
+                    "heading",
+                    "steps"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "minLength": 1,
+                      "description": "Stable id, unique within the page"
+                    },
+                    "type": {
+                      "type": "string",
+                      "const": "stats"
+                    },
+                    "heading": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 70
+                    },
+                    "items": {
+                      "minItems": 2,
+                      "maxItems": 4,
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "value": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 10
+                          },
+                          "unit": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 16
+                          },
+                          "label": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 50
+                          }
+                        },
+                        "required": [
+                          "value",
+                          "label"
+                        ]
+                      },
+                      "description": "Every number must come from the company's materials"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "type",
+                    "items"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "minLength": 1,
+                      "description": "Stable id, unique within the page"
+                    },
+                    "type": {
+                      "type": "string",
+                      "const": "testimonials"
+                    },
+                    "heading": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 70
+                    },
+                    "items": {
+                      "minItems": 1,
+                      "maxItems": 6,
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "quote": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 300
+                          },
+                          "name": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 40
+                          },
+                          "role": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 40
+                          },
+                          "company": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 60
+                          }
+                        },
+                        "required": [
+                          "quote",
+                          "name"
+                        ]
+                      },
+                      "description": "Real testimonials supplied by the company only. The AI never writes these."
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "type",
+                    "items"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "minLength": 1,
+                      "description": "Stable id, unique within the page"
+                    },
+                    "type": {
+                      "type": "string",
+                      "const": "logo_wall"
+                    },
+                    "heading": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 70
+                    },
+                    "logos": {
+                      "minItems": 3,
+                      "maxItems": 18,
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "src": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "alt": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 125,
+                            "description": "Required. Describe what is in the image; never 'image' or the file name"
+                          },
+                          "width": {
+                            "type": "integer",
+                            "exclusiveMinimum": 0,
+                            "maximum": 9007199254740991
+                          },
+                          "height": {
+                            "type": "integer",
+                            "exclusiveMinimum": 0,
+                            "maximum": 9007199254740991
+                          }
+                        },
+                        "required": [
+                          "src",
+                          "alt"
+                        ]
+                      }
+                    },
+                    "permissionConfirmed": {
+                      "type": "boolean",
+                      "const": true,
+                      "description": "Company confirmed it may show these logos"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "type",
+                    "logos",
+                    "permissionConfirmed"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "minLength": 1,
+                      "description": "Stable id, unique within the page"
+                    },
+                    "type": {
+                      "type": "string",
+                      "const": "faq"
+                    },
+                    "heading": {
+                      "default": "Frequently Asked Questions",
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 70
+                    },
+                    "groups": {
+                      "minItems": 1,
+                      "maxItems": 6,
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "title": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 40
+                          },
+                          "items": {
+                            "minItems": 1,
+                            "maxItems": 12,
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "question": {
+                                  "type": "string",
+                                  "minLength": 1,
+                                  "maxLength": 140
+                                },
+                                "answer": {
+                                  "type": "string",
+                                  "minLength": 1,
+                                  "maxLength": 600
+                                }
+                              },
+                              "required": [
+                                "question",
+                                "answer"
+                              ]
+                            }
+                          }
+                        },
+                        "required": [
+                          "items"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "type",
+                    "groups"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "minLength": 1,
+                      "description": "Stable id, unique within the page"
+                    },
+                    "type": {
+                      "type": "string",
+                      "const": "rich_text"
+                    },
+                    "heading": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 70
+                    },
+                    "body": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 6000,
+                      "description": "Markdown subset: paragraphs, **bold**, lists, links, ### subheadings (never # or ##)"
+                    },
+                    "width": {
+                      "default": "narrow",
+                      "type": "string",
+                      "enum": [
+                        "narrow",
+                        "wide"
+                      ]
+                    },
+                    "background": {
+                      "default": "surface",
+                      "type": "string",
+                      "enum": [
+                        "surface",
+                        "alt"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "type",
+                    "body"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "minLength": 1,
+                      "description": "Stable id, unique within the page"
+                    },
+                    "type": {
+                      "type": "string",
+                      "const": "cta_band"
+                    },
+                    "headline": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 70
+                    },
+                    "body": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 200
+                    },
+                    "primary": {
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 30
+                        },
+                        "href": {
+                          "type": "string",
+                          "pattern": "^(\\/[a-z0-9\\-\\/#?=&]*|#[a-z0-9-]+|https?:\\/\\/\\S+|mailto:\\S+|tel:\\S+)$"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "href"
+                      ],
+                      "description": "Guided path, e.g. 'Request a Quote'"
+                    },
+                    "secondary": {
+                      "description": "Self-serve path, e.g. 'Order Samples'",
+                      "type": "object",
+                      "properties": {
+                        "label": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 30
+                        },
+                        "href": {
+                          "type": "string",
+                          "pattern": "^(\\/[a-z0-9\\-\\/#?=&]*|#[a-z0-9-]+|https?:\\/\\/\\S+|mailto:\\S+|tel:\\S+)$"
+                        }
+                      },
+                      "required": [
+                        "label",
+                        "href"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "type",
+                    "headline",
+                    "primary"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "minLength": 1,
+                      "description": "Stable id, unique within the page"
+                    },
+                    "type": {
+                      "type": "string",
+                      "const": "inquiry_form"
+                    },
+                    "form": {
+                      "type": "string",
+                      "enum": [
+                        "contact",
+                        "quote",
+                        "sample",
+                        "project",
+                        "spec_sheet"
+                      ]
+                    },
+                    "heading": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 70
+                    },
+                    "intro": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 220
+                    },
+                    "submitLabel": {
+                      "default": "Send Request",
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 24
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "type",
+                    "form",
+                    "heading"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "minLength": 1,
+                      "description": "Stable id, unique within the page"
+                    },
+                    "type": {
+                      "type": "string",
+                      "const": "product_detail"
+                    },
+                    "showSpecSheet": {
+                      "default": true,
+                      "type": "boolean"
+                    },
+                    "ctas": {
+                      "description": "Defaults: Request a Quote / Order a Sample",
+                      "type": "array",
+                      "prefixItems": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "label": {
+                              "type": "string",
+                              "minLength": 1,
+                              "maxLength": 30
+                            },
+                            "href": {
+                              "type": "string",
+                              "pattern": "^(\\/[a-z0-9\\-\\/#?=&]*|#[a-z0-9-]+|https?:\\/\\/\\S+|mailto:\\S+|tel:\\S+)$"
+                            }
+                          },
+                          "required": [
+                            "label",
+                            "href"
+                          ]
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "label": {
+                              "type": "string",
+                              "minLength": 1,
+                              "maxLength": 30
+                            },
+                            "href": {
+                              "type": "string",
+                              "pattern": "^(\\/[a-z0-9\\-\\/#?=&]*|#[a-z0-9-]+|https?:\\/\\/\\S+|mailto:\\S+|tel:\\S+)$"
+                            }
+                          },
+                          "required": [
+                            "label",
+                            "href"
+                          ]
+                        }
+                      ],
+                      "items": false,
+                      "minItems": 2,
+                      "maxItems": 2
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "type"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "minLength": 1,
+                      "description": "Stable id, unique within the page"
+                    },
+                    "type": {
+                      "type": "string",
+                      "const": "contact_info"
+                    },
+                    "heading": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 70
+                    },
+                    "showHours": {
+                      "default": true,
+                      "type": "boolean"
+                    },
+                    "showMap": {
+                      "default": false,
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "type"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string",
+                      "minLength": 1,
+                      "description": "Stable id, unique within the page"
+                    },
+                    "type": {
+                      "type": "string",
+                      "const": "footer"
+                    },
+                    "blurb": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 200
+                    },
+                    "columns": {
+                      "minItems": 1,
+                      "maxItems": 4,
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "title": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 30
+                          },
+                          "links": {
+                            "minItems": 1,
+                            "maxItems": 10,
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "label": {
+                                  "type": "string",
+                                  "minLength": 1,
+                                  "maxLength": 30
+                                },
+                                "href": {
+                                  "type": "string",
+                                  "pattern": "^(\\/[a-z0-9\\-\\/#?=&]*|#[a-z0-9-]+|https?:\\/\\/\\S+|mailto:\\S+|tel:\\S+)$"
+                                }
+                              },
+                              "required": [
+                                "label",
+                                "href"
+                              ]
+                            }
+                          }
+                        },
+                        "required": [
+                          "title",
+                          "links"
+                        ]
+                      }
+                    },
+                    "newsletter": {
+                      "description": "Separate, unticked opt-in (CAN-SPAM)",
+                      "type": "object",
+                      "properties": {
+                        "enabled": {
+                          "type": "boolean"
+                        },
+                        "heading": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 50
+                        },
+                        "consentText": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 200
+                        }
+                      },
+                      "required": [
+                        "enabled",
+                        "heading",
+                        "consentText"
+                      ]
+                    },
+                    "legalLinks": {
+                      "minItems": 2,
+                      "maxItems": 5,
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "label": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 30
+                          },
+                          "href": {
+                            "type": "string",
+                            "pattern": "^(\\/[a-z0-9\\-\\/#?=&]*|#[a-z0-9-]+|https?:\\/\\/\\S+|mailto:\\S+|tel:\\S+)$"
+                          }
+                        },
+                        "required": [
+                          "label",
+                          "href"
+                        ]
+                      }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "type",
+                    "blurb",
+                    "columns",
+                    "legalLinks"
+                  ]
+                }
+              ]
+            }
+          },
+          "seo": {
+            "default": {
+              "noindex": false
+            },
+            "type": "object",
+            "properties": {
+              "title": {
+                "description": "<title>; target 30–60 characters, unique across the site",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 60
+              },
+              "description": {
+                "description": "Meta description; target 140–160 characters",
+                "type": "string",
+                "minLength": 70,
+                "maxLength": 160
+              },
+              "noindex": {
+                "default": false,
+                "type": "boolean"
+              },
+              "ogImage": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "required": [
+          "slug",
+          "template",
+          "name",
+          "sections"
+        ]
+      }
+    },
+    "collections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "slug": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 60
+          },
+          "shortName": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 30,
+            "description": "Used on tiles and in navigation"
+          },
+          "service": {
+            "type": "string",
+            "description": "Service slug this category belongs to"
+          },
+          "intro": {
+            "type": "string",
+            "minLength": 120,
+            "maxLength": 1200,
+            "description": "Unique intro; >= 120 words recommended for indexing"
+          },
+          "seoBody": {
+            "description": "Bottom-of-page long text (markdown subset)",
+            "type": "string",
+            "maxLength": 4000
+          },
+          "image": {
+            "type": "object",
+            "properties": {
+              "src": {
+                "type": "string",
+                "minLength": 1
+              },
+              "alt": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 125,
+                "description": "Required. Describe what is in the image; never 'image' or the file name"
+              },
+              "width": {
+                "type": "integer",
+                "exclusiveMinimum": 0,
+                "maximum": 9007199254740991
+              },
+              "height": {
+                "type": "integer",
+                "exclusiveMinimum": 0,
+                "maximum": 9007199254740991
+              }
+            },
+            "required": [
+              "src",
+              "alt"
+            ]
+          },
+          "faq": {
+            "maxItems": 6,
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "question": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 140
+                },
+                "answer": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 600
+                }
+              },
+              "required": [
+                "question",
+                "answer"
+              ]
+            }
+          },
+          "seo": {
+            "default": {
+              "noindex": false
+            },
+            "type": "object",
+            "properties": {
+              "title": {
+                "description": "<title>; target 30–60 characters, unique across the site",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 60
+              },
+              "description": {
+                "description": "Meta description; target 140–160 characters",
+                "type": "string",
+                "minLength": 70,
+                "maxLength": 160
+              },
+              "noindex": {
+                "default": false,
+                "type": "boolean"
+              },
+              "ogImage": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "required": [
+          "slug",
+          "name",
+          "shortName",
+          "service",
+          "intro",
+          "image"
+        ]
+      }
+    },
+    "products": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "slug": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 70
+          },
+          "collection": {
+            "type": "string"
+          },
+          "sku": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 24
+          },
+          "summary": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160,
+            "description": "One-line pitch used on cards and as meta description seed"
+          },
+          "description": {
+            "type": "string",
+            "minLength": 80,
+            "maxLength": 2000
+          },
+          "highlights": {
+            "minItems": 2,
+            "maxItems": 6,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 80
+            }
+          },
+          "specs": {
+            "maxItems": 12,
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "label": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 30
+                },
+                "value": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 80
+                }
+              },
+              "required": [
+                "label",
+                "value"
+              ]
+            }
+          },
+          "packaging": {
+            "minItems": 1,
+            "maxItems": 8,
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "label": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 30
+                },
+                "sku": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 24
+                }
+              },
+              "required": [
+                "label"
+              ]
+            }
+          },
+          "usage": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 600
+          },
+          "composition": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string",
+                "enum": [
+                  "Ingredients",
+                  "Materials",
+                  "Composition"
+                ]
+              },
+              "text": {
+                "type": "string",
+                "maxLength": 1500
+              }
+            },
+            "required": [
+              "label",
+              "text"
+            ]
+          },
+          "image": {
+            "type": "object",
+            "properties": {
+              "src": {
+                "type": "string",
+                "minLength": 1
+              },
+              "alt": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 125,
+                "description": "Required. Describe what is in the image; never 'image' or the file name"
+              },
+              "width": {
+                "type": "integer",
+                "exclusiveMinimum": 0,
+                "maximum": 9007199254740991
+              },
+              "height": {
+                "type": "integer",
+                "exclusiveMinimum": 0,
+                "maximum": 9007199254740991
+              }
+            },
+            "required": [
+              "src",
+              "alt"
+            ]
+          },
+          "specSheetUrl": {
+            "type": "string"
+          },
+          "featured": {
+            "default": false,
+            "type": "boolean"
+          },
+          "priceNote": {
+            "description": "Optional reference price, e.g. 'From $78 / gal'. Hidden unless show = true",
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 60
+              },
+              "show": {
+                "default": false,
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "text"
+            ]
+          },
+          "seo": {
+            "default": {
+              "noindex": false
+            },
+            "type": "object",
+            "properties": {
+              "title": {
+                "description": "<title>; target 30–60 characters, unique across the site",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 60
+              },
+              "description": {
+                "description": "Meta description; target 140–160 characters",
+                "type": "string",
+                "minLength": 70,
+                "maxLength": 160
+              },
+              "noindex": {
+                "default": false,
+                "type": "boolean"
+              },
+              "ogImage": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "required": [
+          "slug",
+          "name",
+          "collection",
+          "summary",
+          "description",
+          "highlights",
+          "specs",
+          "packaging",
+          "image"
+        ]
+      }
+    },
+    "templates": {
+      "type": "object",
+      "properties": {
+        "collection": {
+          "minItems": 2,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "hero",
+              "intro",
+              "products",
+              "faq",
+              "seo_body",
+              "cta"
+            ]
+          },
+          "description": "Order of sections on every category page"
+        },
+        "product": {
+          "minItems": 1,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "detail",
+              "related",
+              "cta"
+            ]
+          },
+          "description": "Order of sections on every product page"
+        },
+        "collectionSubhead": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160,
+          "description": "Hero subhead on every category page; {count} = number of products"
+        },
+        "collectionCta": {
+          "type": "object",
+          "properties": {
+            "headline": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 70
+            },
+            "body": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            }
+          },
+          "required": [
+            "headline"
+          ]
+        }
+      },
+      "required": [
+        "collection",
+        "product",
+        "collectionSubhead",
+        "collectionCta"
+      ]
+    },
+    "defaultCtas": {
+      "type": "object",
+      "properties": {
+        "quote": {
+          "type": "object",
+          "properties": {
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 30
+            },
+            "href": {
+              "type": "string",
+              "pattern": "^(\\/[a-z0-9\\-\\/#?=&]*|#[a-z0-9-]+|https?:\\/\\/\\S+|mailto:\\S+|tel:\\S+)$"
+            }
+          },
+          "required": [
+            "label",
+            "href"
+          ]
+        },
+        "sample": {
+          "type": "object",
+          "properties": {
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 30
+            },
+            "href": {
+              "type": "string",
+              "pattern": "^(\\/[a-z0-9\\-\\/#?=&]*|#[a-z0-9-]+|https?:\\/\\/\\S+|mailto:\\S+|tel:\\S+)$"
+            }
+          },
+          "required": [
+            "label",
+            "href"
+          ]
+        }
+      },
+      "required": [
+        "quote",
+        "sample"
+      ]
+    }
+  },
+  "required": [
+    "version",
+    "company",
+    "theme",
+    "services",
+    "globals",
+    "pages",
+    "collections",
+    "products",
+    "templates",
+    "defaultCtas"
+  ],
+  "$defs": {
+    "__schema0": {
+      "type": "object",
+      "properties": {
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 30
+        },
+        "href": {
+          "type": "string"
+        },
+        "children": {
+          "maxItems": 24,
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/__schema0"
+          }
+        }
+      },
+      "required": [
+        "label",
+        "href"
+      ]
+    }
+  }
+}

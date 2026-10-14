@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Stable id, unique within the page"
+    },
+    "type": {
+      "type": "string",
+      "const": "process_steps"
+    },
+    "heading": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 70
+    },
+    "intro": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 220
+    },
+    "steps": {
+      "minItems": 3,
+      "maxItems": 8,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 50
+          },
+          "body": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          }
+        },
+        "required": [
+          "title",
+          "body"
+        ]
+      }
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "heading",
+    "steps"
+  ]
+}

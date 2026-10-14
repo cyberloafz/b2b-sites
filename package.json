@@ -1,0 +1,49 @@
+{
+  "name": "b2b-manufacturer-template",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "db:import": "tsx scripts/db-import.ts demo",
+    "validate": "tsx scripts/validate-site.ts",
+    "schema:export": "tsx scripts/export-json-schema.ts",
+    "audit": "node scripts/seo-audit.mjs http://localhost:3000",
+    "test:webhooks": "PGLITE_DIR=.data/test-webhooks tsx tests/check-webhook-retry.mts",
+    "test:e2e": "python3 tests/e2e_admin.py .data/mock-log.jsonl",
+    "typecheck": "tsc --noEmit -p .",
+    "test:generation": "PGLITE_DIR=.data/test-generation AI_PROVIDER=mock tsx tests/check-generation.mts",
+    "test:ai-adapter": "tsx tests/check-model-adapter.mts",
+    "test:e2e:phase3": "python3 tests/e2e_phase3.py",
+    "test:e2e:phase4": "python3 tests/e2e_phase4.py",
+    "test:jobs": "PGLITE_DIR=.data/test-jobs tsx tests/check-jobs.mts",
+    "test:e2e:phase5": "python3 tests/e2e_phase5.py .data/mock-log.jsonl",
+    "test:e2e:platform": "python3 tests/e2e_platform.py",
+    "test:blob": "tsx tests/check-blob-storage.mts"
+  },
+  "dependencies": {
+    "@electric-sql/pglite": "^0.5.9",
+    "@vercel/blob": "^2.8.1",
+    "aws4fetch": "^1.0.20",
+    "jose": "^6.2.12",
+    "next": "15.5.4",
+    "papaparse": "^5.7.0",
+    "pg": "^8.23.1",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "read-excel-file": "^9.3.12",
+    "sharp": "^0.35.5",
+    "zod": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/papaparse": "^5.5.2",
+    "@types/pg": "^8.23.1",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "node-html-parser": "^7.0.1",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}

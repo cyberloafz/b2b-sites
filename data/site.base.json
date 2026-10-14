@@ -1,0 +1,314 @@
+{
+  "version": 1,
+  "company": {
+    "legalName": "Meridian Bay Formulations, Inc.",
+    "brandName": "Meridian Bay",
+    "tagline": "Private label and custom skincare manufacturing in South Carolina",
+    "foundedYear": 1998,
+    "description": "Meridian Bay Formulations is a skincare and personal care contract manufacturer in North Charleston, South Carolina, founded in 1998. It produces private label stock formulas, custom formulations and bulk wholesale products for indie brands, spas, salons and retailers across the United States, with minimums from one gallon in bulk or 250 filled units.",
+    "address": {
+      "street": "1200 Harbor View Industrial Pkwy",
+      "city": "North Charleston",
+      "region": "SC",
+      "postalCode": "29405",
+      "country": "US"
+    },
+    "phone": "+18435550142",
+    "phoneDisplay": "(843) 555-0142",
+    "email": "hello@meridianbay.example",
+    "inquiryRecipients": [
+      "sales@meridianbay.example"
+    ],
+    "hours": [
+      {
+        "days": "Mon–Fri",
+        "open": "8:00 AM",
+        "close": "5:00 PM"
+      }
+    ],
+    "certifications": [
+      "ISO 22716 cosmetic GMP",
+      "FDA-registered facility",
+      "Leaping Bunny cruelty-free"
+    ],
+    "social": [
+      {
+        "network": "linkedin",
+        "url": "https://www.linkedin.com/company/meridian-bay-example"
+      },
+      {
+        "network": "instagram",
+        "url": "https://www.instagram.com/meridianbay.example"
+      }
+    ],
+    "siteUrl": "https://meridianbay.example"
+  },
+  "theme": {
+    "stylePack": "natural-organic",
+    "color": {
+      "primary": "#1f3d4a",
+      "primaryInk": "#f4f1ea",
+      "accent": "#e9c46a",
+      "accentInk": "#1f2a30",
+      "secondary": "#d8e6e3",
+      "surface": "#fcfbf8",
+      "surfaceAlt": "#f2efe8",
+      "text": "#1e2529",
+      "muted": "#56616a",
+      "border": "#ddd7cb"
+    },
+    "font": {
+      "heading": "classic-serif",
+      "body": "modern-sans",
+      "headingCase": "normal"
+    },
+    "radius": "8",
+    "spacing": "standard",
+    "containerWidth": "1300",
+    "buttonStyle": "solid"
+  },
+  "services": [
+    {
+      "slug": "private-label",
+      "name": "Private Label"
+    },
+    {
+      "slug": "custom-formulation",
+      "name": "Custom Formulation"
+    },
+    {
+      "slug": "bulk-wholesale",
+      "name": "Bulk & Wholesale"
+    }
+  ],
+  "globals": {
+    "announcement": {
+      "id": "announcement",
+      "type": "announcement_bar",
+      "messages": [
+        {
+          "text": "Sample orders ship in 3–5 business days.",
+          "link": {
+            "label": "Order samples",
+            "href": "/request-samples"
+          }
+        },
+        {
+          "text": "Filled private label runs start at 250 units."
+        }
+      ]
+    },
+    "header": {
+      "id": "header",
+      "type": "header",
+      "logo": {
+        "src": "/images/logo-mark.svg",
+        "alt": "Meridian Bay Formulations logo",
+        "width": 40,
+        "height": 40
+      },
+      "logoText": "Meridian Bay Formulations",
+      "nav": [
+        {
+          "label": "Services",
+          "href": "/services/private-label",
+          "children": [
+            {
+              "label": "Private Label",
+              "href": "/services/private-label"
+            },
+            {
+              "label": "Custom Formulation",
+              "href": "/services/custom-formulation"
+            },
+            {
+              "label": "Bulk & Wholesale",
+              "href": "/services/bulk-wholesale"
+            },
+            {
+              "label": "How It Works",
+              "href": "/how-it-works"
+            }
+          ]
+        },
+        {
+          "label": "Products",
+          "href": "/products",
+          "children": [
+            {
+              "label": "Facial Cleansers",
+              "href": "/products/private-label-facial-cleansers"
+            },
+            {
+              "label": "Serums",
+              "href": "/products/private-label-serums"
+            },
+            {
+              "label": "Moisturizers",
+              "href": "/products/private-label-moisturizers"
+            },
+            {
+              "label": "Eye Care",
+              "href": "/products/private-label-eye-care"
+            },
+            {
+              "label": "Body Lotions",
+              "href": "/products/private-label-body-lotions"
+            },
+            {
+              "label": "Body Washes & Scrubs",
+              "href": "/products/private-label-body-washes"
+            },
+            {
+              "label": "Hair Care",
+              "href": "/products/private-label-hair-care"
+            },
+            {
+              "label": "Lip Care",
+              "href": "/products/private-label-lip-care"
+            }
+          ]
+        },
+        {
+          "label": "About",
+          "href": "/about"
+        },
+        {
+          "label": "FAQ",
+          "href": "/faq"
+        },
+        {
+          "label": "Contact",
+          "href": "/contact"
+        }
+      ],
+      "cta": {
+        "label": "Request a Quote",
+        "href": "/contact"
+      }
+    },
+    "footer": {
+      "id": "footer",
+      "type": "footer",
+      "blurb": "Private label, custom formulation and bulk skincare manufacturing for US brands since 1998. ISO 22716 certified facility in North Charleston, South Carolina.",
+      "columns": [
+        {
+          "title": "Services",
+          "links": [
+            {
+              "label": "Private Label",
+              "href": "/services/private-label"
+            },
+            {
+              "label": "Custom Formulation",
+              "href": "/services/custom-formulation"
+            },
+            {
+              "label": "Bulk & Wholesale",
+              "href": "/services/bulk-wholesale"
+            },
+            {
+              "label": "How It Works",
+              "href": "/how-it-works"
+            }
+          ]
+        },
+        {
+          "title": "Products",
+          "links": [
+            {
+              "label": "All Products",
+              "href": "/products"
+            },
+            {
+              "label": "Serums",
+              "href": "/products/private-label-serums"
+            },
+            {
+              "label": "Moisturizers",
+              "href": "/products/private-label-moisturizers"
+            },
+            {
+              "label": "Body Lotions",
+              "href": "/products/private-label-body-lotions"
+            },
+            {
+              "label": "Hair Care",
+              "href": "/products/private-label-hair-care"
+            }
+          ]
+        },
+        {
+          "title": "Company",
+          "links": [
+            {
+              "label": "About Us",
+              "href": "/about"
+            },
+            {
+              "label": "FAQ",
+              "href": "/faq"
+            },
+            {
+              "label": "Request Samples",
+              "href": "/request-samples"
+            },
+            {
+              "label": "Contact",
+              "href": "/contact"
+            }
+          ]
+        }
+      ],
+      "newsletter": {
+        "enabled": true,
+        "heading": "Formulation news, a few times a year",
+        "consentText": "I agree to receive marketing emails from Meridian Bay. Unsubscribe anytime."
+      },
+      "legalLinks": [
+        {
+          "label": "Privacy Policy",
+          "href": "/privacy"
+        },
+        {
+          "label": "Terms",
+          "href": "/terms"
+        },
+        {
+          "label": "Accessibility",
+          "href": "/accessibility"
+        }
+      ]
+    }
+  },
+  "templates": {
+    "collection": [
+      "hero",
+      "intro",
+      "products",
+      "faq",
+      "seo_body",
+      "cta"
+    ],
+    "product": [
+      "detail",
+      "related",
+      "cta"
+    ],
+    "collectionCta": {
+      "headline": "Ready to put your name on it?",
+      "body": "Tell us what you are launching. A formulation specialist will reply within one business day with options, minimums and lead times."
+    },
+    "collectionSubhead": "{count} stock formulas, ready for your label. Order samples, then buy in bulk or filled."
+  },
+  "defaultCtas": {
+    "quote": {
+      "label": "Request a Quote",
+      "href": "/contact"
+    },
+    "sample": {
+      "label": "Order Samples",
+      "href": "/request-samples"
+    }
+  }
+}

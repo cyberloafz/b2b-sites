@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Stable id, unique within the page"
+    },
+    "type": {
+      "type": "string",
+      "const": "rich_text"
+    },
+    "heading": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 70
+    },
+    "body": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 6000,
+      "description": "Markdown subset: paragraphs, **bold**, lists, links, ### subheadings (never # or ##)"
+    },
+    "width": {
+      "default": "narrow",
+      "type": "string",
+      "enum": [
+        "narrow",
+        "wide"
+      ]
+    },
+    "background": {
+      "default": "surface",
+      "type": "string",
+      "enum": [
+        "surface",
+        "alt"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "body"
+  ]
+}

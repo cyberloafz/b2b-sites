@@ -1,0 +1,216 @@
+[
+  {
+    "slug": "private-label-facial-cleansers",
+    "name": "Private Label Facial Cleansers",
+    "shortName": "Facial Cleansers",
+    "service": "private-label",
+    "intro": "A cleanser is usually the first product a new skincare brand sells and the one customers reorder most often, so it has to feel right on day one. Our stock facial cleansers cover the three textures shoppers ask for: a low-foam gel for normal and combination skin, a milky cream for dry and mature skin, and a salicylic acid wash for oily, breakout-prone skin. Each base is sulfate-free, pH-balanced for the face and tested for stability in pump, tube and flip-cap packaging. You can launch a formula exactly as it is, or ask our chemists to swap the fragrance, add a botanical extract or adjust the viscosity for your dispenser. Order a 2 oz sample of each, compare them at your sink, then buy in bulk by the gallon or let us fill and label units for you.",
+    "seoBody": "### Choosing a cleanser format for your line\n\nGel cleansers suit brands selling to younger or oily-skin customers who expect a fresh rinse. Cream cleansers fit spa and anti-aging lines where comfort matters more than lather. Active cleansers with salicylic acid are popular with acne-focused brands, but they need clear usage directions on the label.\n\n### What you can customize\n\n- Fragrance: unscented, essential oil blends, or a fragrance you supply\n- Botanical add-ins such as green tea, chamomile or cucumber extract\n- Color and viscosity to match your packaging\n\nAll private label cleansers are made in our ISO 22716 certified facility in North Charleston, South Carolina.",
+    "image": {
+      "src": "/images/collections/private-label-facial-cleansers.svg",
+      "alt": "Illustration of pump and tube facial cleanser packaging",
+      "width": 800,
+      "height": 600
+    },
+    "faq": [
+      {
+        "question": "Can I sell these cleansers under my own brand name?",
+        "answer": "Yes. Every stock formula on this page is available for private label. You choose the name and packaging, and we can fill and label units for you or ship the formula in bulk."
+      },
+      {
+        "question": "Are the cleansers sulfate-free?",
+        "answer": "Yes. All three stock cleansers use mild, sulfate-free surfactant systems."
+      },
+      {
+        "question": "What is the minimum order for a filled cleanser?",
+        "answer": "Filled runs start at 250 units per formula. Bulk orders start at one gallon."
+      }
+    ],
+    "seo": {
+      "title": "Private Label Facial Cleansers | Meridian Bay",
+      "description": "Sulfate-free private label facial cleansers in gel, cream and salicylic formats. Low minimums, bulk or filled, made in an ISO 22716 facility in South Carolina."
+    }
+  },
+  {
+    "slug": "private-label-serums",
+    "name": "Private Label Serums",
+    "shortName": "Serums",
+    "service": "private-label",
+    "intro": "Serums carry the highest price per ounce in most skincare lines, which makes them the fastest way for a growing brand to lift its average order value. Our private label serum range is built around the ingredients customers already search for by name: stabilized vitamin C for brightening, multi-weight hyaluronic acid for hydration, niacinamide for oil balance and visible pores, and a peptide complex for firmness. Every serum is formulated for one-ounce dropper or airless bottles and is preserved to stay stable after opening. Brands typically start with two serums that complement each other, such as vitamin C for mornings and peptides for evenings, then add the others as their customer base grows. Order samples of the full set, then choose bulk gallons for in-house filling or finished, labeled bottles ready to sell.",
+    "seoBody": "### Pairing serums in a starter line\n\nA morning and evening pair is the easiest serum story to sell. Vitamin C with hyaluronic acid covers brightening and hydration; niacinamide with peptides suits brands focused on texture and firmness.\n\n### Packaging guidance\n\nVitamin C serums should go in amber or opaque packaging. Airless bottles work well for peptide and hyaluronic serums. Our team checks compatibility before every filled run.",
+    "image": {
+      "src": "/images/collections/private-label-serums.svg",
+      "alt": "Illustration of amber dropper bottles for serums",
+      "width": 800,
+      "height": 600
+    },
+    "faq": [
+      {
+        "question": "Which serum should a new brand launch first?",
+        "answer": "Vitamin C and hyaluronic acid serums are the most searched and the easiest to explain to customers, so many brands start with that pair."
+      },
+      {
+        "question": "Can you raise the vitamin C percentage?",
+        "answer": "Concentration changes are a custom formulation request. Our chemists can advise on stability and packaging before you commit."
+      }
+    ],
+    "seo": {
+      "title": "Private Label Serums: Vitamin C, Peptide & More",
+      "description": "Private label serums with vitamin C, hyaluronic acid, niacinamide and peptides. Dropper or airless, bulk or filled, made in South Carolina."
+    }
+  },
+  {
+    "slug": "private-label-moisturizers",
+    "name": "Private Label Moisturizers",
+    "shortName": "Moisturizers",
+    "service": "private-label",
+    "intro": "Every regimen ends with a moisturizer, so this is the product your customers will notice running out first. Our private label moisturizers come in three weights. The Daily Barrier Moisturizer is a medium cream with ceramides and squalane that suits most skin types. The Oil-Free Gel Moisturizer is a light, fast-absorbing gel for oily skin and warm climates. The Rich Night Cream is a dense, buttery texture with shea and peptides for dry or mature skin. Each formula fills cleanly into jars, tubes or airless pumps, and each can be made fragrance-free for sensitive-skin positioning. Many brands sell the gel and the night cream together as a day-and-night duo. You can buy any of them by the gallon for your own filling line or have us fill, cap and label finished units.",
+    "image": {
+      "src": "/images/collections/private-label-moisturizers.svg",
+      "alt": "Illustration of cream jars and an airless pump for moisturizers",
+      "width": 800,
+      "height": 600
+    },
+    "faq": [
+      {
+        "question": "Can the moisturizers be made fragrance-free?",
+        "answer": "Yes. All three stock moisturizers are available unscented at no extra charge."
+      },
+      {
+        "question": "Do you offer SPF moisturizers?",
+        "answer": "Sunscreens are regulated as over-the-counter drugs in the US and are not part of our stock range. Contact us to discuss your project."
+      }
+    ],
+    "seo": {
+      "title": "Private Label Moisturizers & Night Creams",
+      "description": "Private label face moisturizers in cream, gel and rich night cream textures. Fragrance-free options, jars or airless pumps, low minimums from a US manufacturer."
+    }
+  },
+  {
+    "slug": "private-label-eye-care",
+    "name": "Private Label Eye Care",
+    "shortName": "Eye Care",
+    "service": "private-label",
+    "intro": "Eye products are small, giftable and easy to add to an existing skincare line, which is why they often become a brand's best upsell. The skin around the eyes is thin, so our eye care formulas are lighter than face creams and are tested for comfort near the eye area. The range includes a caffeine eye gel for a fresh, de-puffed look in the morning, a peptide eye cream with a richer feel for evenings, and a cooling eye serum designed for metal roller-ball applicators. Each formula is fragrance-free by default. Because eye products sell in 0.5 oz and 15 mL sizes, a small bulk order goes a long way; one gallon fills roughly 250 half-ounce units. Order samples to test texture and packaging fit, then scale to filled units when you are ready.",
+    "image": {
+      "src": "/images/collections/private-label-eye-care.svg",
+      "alt": "Illustration of a small tube and a roller-ball bottle for eye care",
+      "width": 800,
+      "height": 600
+    },
+    "faq": [
+      {
+        "question": "Are the eye formulas fragrance-free?",
+        "answer": "Yes. All stock eye care formulas are made without added fragrance."
+      },
+      {
+        "question": "What packaging works for the cooling eye serum?",
+        "answer": "It is designed for roller-ball bottles with a metal ball. We can source compatible components for filled runs."
+      }
+    ],
+    "seo": {
+      "title": "Private Label Eye Gels, Creams & Serums",
+      "description": "Private label eye care: caffeine eye gel, peptide eye cream and cooling roller-ball eye serum. Fragrance-free, small sizes, bulk or filled in the USA."
+    }
+  },
+  {
+    "slug": "private-label-body-lotions",
+    "name": "Private Label Body Lotions",
+    "shortName": "Body Lotions",
+    "service": "private-label",
+    "intro": "Body care moves in larger sizes and at higher volume than facial skincare, which makes it a dependable revenue base for spas, boutiques and lifestyle brands. Our private label body lotions range from a light daily lotion that absorbs in seconds to a whipped body butter that melts on contact. The Shea Body Lotion sits in the middle: rich enough for winter, light enough to use after every shower. All three hold fragrance well, so they are a natural choice for brands that build collections around a signature scent. You can supply your own fragrance oil or choose from our library of tested blends. Body lotions fill into 8 oz and 16 oz pump bottles, tubes or jars, and bulk buyers can order 5-gallon pails for refill stations and back-bar use.",
+    "image": {
+      "src": "/images/collections/private-label-body-lotions.svg",
+      "alt": "Illustration of large pump bottles and a jar of body lotion",
+      "width": 800,
+      "height": 600
+    },
+    "faq": [
+      {
+        "question": "Can I use my own fragrance?",
+        "answer": "Yes. Send us your fragrance oil and we will run a compatibility and stability check before production."
+      },
+      {
+        "question": "Do you sell 5-gallon pails for refill stations?",
+        "answer": "Yes. All body lotions are available in 1-gallon and 5-gallon containers."
+      }
+    ],
+    "seo": {
+      "title": "Private Label Body Lotions & Body Butters",
+      "description": "Private label body lotion, shea lotion and whipped body butter. Custom fragrance, 8–16 oz fills or 5-gallon pails for spas and refill stations."
+    }
+  },
+  {
+    "slug": "private-label-body-washes",
+    "name": "Private Label Body Washes & Scrubs",
+    "shortName": "Body Washes & Scrubs",
+    "service": "private-label",
+    "intro": "Shower products are the everyday items in a body care line: customers use them daily, finish them quickly and come back for more. Our private label range covers a botanical body wash with a rich, creamy lather, a sugar body polish for weekly exfoliation and a moisturizing shower oil that turns milky with water. The body wash is sulfate-free and thick enough for pump or flip-cap bottles, while the polish is packed in wide-mouth jars so customers can scoop it easily. These products pair well with our body lotions, letting a brand build a complete wash, scrub and moisturize ritual around one signature fragrance. Hotels, spas and gyms also buy the body wash in gallon and 5-gallon sizes for dispensers. Request samples to compare lather, scent throw and rinse-off feel.",
+    "image": {
+      "src": "/images/collections/private-label-body-washes.svg",
+      "alt": "Illustration of a flip-cap body wash bottle and a scrub jar",
+      "width": 800,
+      "height": 600
+    },
+    "faq": [
+      {
+        "question": "Is the body wash suitable for hotel dispensers?",
+        "answer": "Yes. It is available in 1-gallon and 5-gallon containers and flows well through standard wall dispensers."
+      }
+    ],
+    "seo": {
+      "title": "Private Label Body Wash, Scrubs & Shower Oil",
+      "description": "Private label sulfate-free body wash, sugar body polish and shower oil. Fragrance-matched to your lotions, filled or in bulk gallons for spas and hotels."
+    }
+  },
+  {
+    "slug": "private-label-hair-care",
+    "name": "Private Label Hair Care",
+    "shortName": "Hair Care",
+    "service": "private-label",
+    "intro": "Salons and barbershops often want shelf products that carry their own name, and hair care is where that demand starts. Our private label hair care range includes a sulfate-free shampoo that is safe for color-treated hair, a hydrating conditioner with plant oils and a leave-in conditioning spray for detangling and heat protection. The shampoo and conditioner share a fragrance profile so they sell naturally as a pair, and the leave-in spray adds a third item at the styling chair. Each formula is tested for clarity and viscosity in 8 oz and 12 oz bottles and for flow in 1-liter salon pumps. Bulk gallons are available for back-bar use, and filled units can be labeled with your salon's branding so clients take the same products home.",
+    "image": {
+      "src": "/images/collections/private-label-hair-care.svg",
+      "alt": "Illustration of shampoo, conditioner and spray bottles",
+      "width": 800,
+      "height": 600
+    },
+    "faq": [
+      {
+        "question": "Is the shampoo safe for color-treated hair?",
+        "answer": "Yes. It is sulfate-free and formulated with a mild surfactant system suitable for color-treated hair."
+      },
+      {
+        "question": "Can I order back-bar sizes for my salon?",
+        "answer": "Yes. Shampoo and conditioner are available in 1-gallon and 5-gallon containers, and we can fill 1-liter salon pump bottles."
+      }
+    ],
+    "seo": {
+      "title": "Private Label Shampoo, Conditioner & Hair Care",
+      "description": "Private label sulfate-free shampoo, hydrating conditioner and leave-in spray for salons and brands. Back-bar gallons or filled, labeled bottles."
+    }
+  },
+  {
+    "slug": "private-label-lip-care",
+    "name": "Private Label Lip Care",
+    "shortName": "Lip Care",
+    "service": "private-label",
+    "intro": "Lip products have the lowest price point in a skincare line, which makes them perfect for checkout counters, gift sets and subscription boxes. They are also the easiest way to test a new brand name before investing in larger items. Our stock lip care range includes a beeswax lip balm in standard 0.15 oz tubes, a sugar lip scrub in small pots and a tinted lip oil with a sheer, glossy finish. The balm can be flavored with any of our food-grade flavor oils, and the lip oil comes in three sheer shades. Because each unit uses so little product, minimum orders stay low: a single run of 250 balm tubes is enough for most launches. Order samples to compare flavor, texture and finish before you choose.",
+    "image": {
+      "src": "/images/collections/private-label-lip-care.svg",
+      "alt": "Illustration of lip balm tubes and a small scrub pot",
+      "width": 800,
+      "height": 600
+    },
+    "faq": [
+      {
+        "question": "Can the lip balm be made vegan?",
+        "answer": "Our stock balm uses beeswax. A vegan version with plant waxes is available as a custom formulation."
+      }
+    ],
+    "seo": {
+      "title": "Private Label Lip Balm, Lip Scrub & Lip Oil",
+      "description": "Private label beeswax lip balm, sugar lip scrub and tinted lip oil. Flavors and shades to choose from, runs from 250 units, made in South Carolina."
+    }
+  }
+]

@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Stable id, unique within the page"
+    },
+    "type": {
+      "type": "string",
+      "const": "category_tiles"
+    },
+    "heading": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 70
+    },
+    "intro": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 220
+    },
+    "categories": {
+      "minItems": 2,
+      "maxItems": 12,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "Collection slug"
+      },
+      "description": "Tile image and alt come from the collection itself"
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "categories"
+  ]
+}

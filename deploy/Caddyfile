@@ -1,0 +1,17 @@
+# HTTPS for the admin host and, on demand, for every customer domain the platform has verified.
+{
+	on_demand_tls {
+		ask http://app:3000/api/domains/allowed
+	}
+}
+
+{$ADMIN_HOST} {
+	reverse_proxy app:3000
+}
+
+https:// {
+	tls {
+		on_demand
+	}
+	reverse_proxy app:3000
+}

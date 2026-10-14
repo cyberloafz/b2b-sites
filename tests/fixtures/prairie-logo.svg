@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="80" viewBox="0 0 240 80">
+  <rect x="4" y="10" width="60" height="60" rx="12" fill="#b5542a"/>
+  <path d="M14 56 L34 26 L54 56 Z" fill="#f4e9d8"/>
+  <text x="76" y="50" font-family="Georgia, serif" font-size="26" fill="#3b2a1e">Prairie</text>
+</svg>

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Stable id, unique within the page"
+    },
+    "type": {
+      "type": "string",
+      "const": "contact_info"
+    },
+    "heading": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 70
+    },
+    "showHours": {
+      "default": true,
+      "type": "boolean"
+    },
+    "showMap": {
+      "default": false,
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "id",
+    "type"
+  ]
+}

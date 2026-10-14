@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Stable id, unique within the page"
+    },
+    "type": {
+      "type": "string",
+      "const": "inquiry_form"
+    },
+    "form": {
+      "type": "string",
+      "enum": [
+        "contact",
+        "quote",
+        "sample",
+        "project",
+        "spec_sheet"
+      ]
+    },
+    "heading": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 70
+    },
+    "intro": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 220
+    },
+    "submitLabel": {
+      "default": "Send Request",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 24
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "form",
+    "heading"
+  ]
+}
